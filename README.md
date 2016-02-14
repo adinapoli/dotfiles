@@ -4,4 +4,6 @@ GNU stow. See [this blog post](http://brandon.invergo.net/news/2012-05-26-using-
 
 Currently includes:
 
-- Emacs
+- [Emacs](https://www.gnu.org/software/emacs/)
+- [Newsbeuter](https://github.com/akrennmair/newsbeuter)
+- [Zsh](https://zsh.org) (Aliases only)
