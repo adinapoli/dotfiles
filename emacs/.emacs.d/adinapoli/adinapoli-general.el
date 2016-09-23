@@ -26,7 +26,7 @@
 
 (when (>= emacs-major-version 24)
   (require 'package)
-  (package-initialize)
+  ;;(package-initialize)
   (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
   )
 

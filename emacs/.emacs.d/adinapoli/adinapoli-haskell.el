@@ -1,5 +1,5 @@
 ;;; -*- lexical-binding: t -*-
-;;; adinapoli-haskell.el --- Support for the haskell programming language
+;;; adinapoli-haskell.el --- Support for the Haskell programming language
 
 ;; Copyright (C) 2016 Alfredo Di Napoli
 
@@ -21,9 +21,11 @@
 ;;; Code:
 
 (adinapoli/install-and-require 'haskell-mode)
+(adinapoli/install-and-require 'intero)
 (adinapoli/install-and-require 'hindent)
 
 (define-key evil-normal-state-map (kbd "C-n") 'flycheck-next-error)
+(define-key evil-normal-state-map (kbd "C-c") 'intero-type-at)
 
 (defun adinapoli/haskell-fix-imports ()
   (add-hook 'before-save-hook 'haskell-sort-imports)
@@ -31,11 +33,11 @@
 
 
 ;; Final entry point
-(add-hook 'haskell-mode-hook (lambda ()
-                               (progn
-                                 (flycheck-select-checker 'haskell-stack-ghc)
-                                 (flycheck-add-next-checker 'haskell-stack-ghc '(warning . haskell-hlint))
-                                 )))
+;;(add-hook 'haskell-mode-hook (lambda ()
+;;                               (progn
+;;                                 (flycheck-select-checker 'haskell-stack-ghc)
+;;                                 (flycheck-add-next-checker 'haskell-stack-ghc '(warning . haskell-hlint))
+;;                                 )))
 (add-hook 'haskell-mode-hook 'haskell-indentation-mode)
 (add-hook 'haskell-mode-hook 'hindent-mode)
 (add-hook 'haskell-mode-hook 'adinapoli/haskell-fix-imports)

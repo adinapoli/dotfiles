@@ -1,6 +1,5 @@
 
-alias e='ITERM_24BIT=1 /usr/local/bin/emacs'
+alias e='ITERM_24BIT=1 /usr/local/bin/emacs -nw'
 alias ec='emacsclient -a "" -nw'
-alias vi=nvim
-alias vim=nvim
+alias vi=vim
 alias nb=newsbeuter

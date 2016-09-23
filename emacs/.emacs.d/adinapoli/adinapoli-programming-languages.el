@@ -41,7 +41,10 @@
 ;;; Shows the training whitespaces and tab when programming.
 (defun adinapoli/show-whitespace-tokens ()
   ;; Do not manipulate the Colors buffer that we get when doing `list-colors-display`.
-  (unless (string= (buffer-name) "*Colors*")
+  (unless (or (string= (buffer-name) "*Colors*")
+              (string= (buffer-name) "*terminal*")
+              (string= (buffer-name) "*Completions*")
+              )
     (font-lock-add-keywords nil '(("\t+" (0 'adinapoli-tab-face t))
                                   ("[ \t]+$" (0 'adinapoli-trailing-space-face t))))
   ))
@@ -52,6 +55,8 @@
 (require 'adinapoli-python)
 (require 'adinapoli-haskell)
 (require 'adinapoli-purescript)
+(require 'adinapoli-rust)
+(require 'adinapoli-html)
 
 ;; "Secondary" programming languages which does not require extra configs.
 (adinapoli/install-and-require 'yaml-mode)
