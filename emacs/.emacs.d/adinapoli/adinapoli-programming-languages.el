@@ -57,6 +57,7 @@
 (require 'adinapoli-purescript)
 (require 'adinapoli-rust)
 (require 'adinapoli-html)
+(require 'adinapoli-elm)
 
 ;; "Secondary" programming languages which does not require extra configs.
 (adinapoli/install-and-require 'yaml-mode)

@@ -1,5 +1,5 @@
 ;;; -*- lexical-binding: t -*-
-;;; adinapoli-rust.el --- Support for the Rust programming language
+;;; adinapoli-elm.el --- Support for the Elm programming language
 
 ;; Copyright (C) 2016 Alfredo Di Napoli
 
@@ -20,15 +20,16 @@
 
 ;;; Code:
 
-;;; Take inspiration from: http://julienblanchard.com/2016/fancy-rust-development-with-emacs/
+(adinapoli/install-and-require 'elm-mode)
+(adinapoli/install-and-require 'flycheck)
+(adinapoli/install-and-require 'flycheck-elm)
+(require 'adinapoli-evil)
 
-(adinapoli/install-and-require 'rust-mode)
-;;(adinapoli/install-and-require 'cargo)
-;;(add-hook 'rust-mode-hook 'cargo-minor-mode)
-(adinapoli/install-and-require 'flycheck-rust)
+(setq elm-format-on-save t)
+(setq elm-sort-imports-on-save t)
 
-(add-hook 'flycheck-mode-hook #'flycheck-rust-setup)
-(add-hook 'before-save-hook #'rust-format-buffer)
+(evil-leader/set-key-for-mode 'elm-mode "c" 'elm-compile-main)
+(add-hook 'flycheck-mode-hook 'flycheck-elm-setup)
 
-(provide 'adinapoli-rust)
-;;; adinapoli-rust.el ends here
+(provide 'adinapoli-elm)
+;;; adinapoli-elm.el ends here

@@ -31,13 +31,6 @@
   (add-hook 'before-save-hook 'haskell-sort-imports)
   (add-hook 'before-save-hook 'haskell-align-imports))
 
-
-;; Final entry point
-;;(add-hook 'haskell-mode-hook (lambda ()
-;;                               (progn
-;;                                 (flycheck-select-checker 'haskell-stack-ghc)
-;;                                 (flycheck-add-next-checker 'haskell-stack-ghc '(warning . haskell-hlint))
-;;                                 )))
 (add-hook 'haskell-mode-hook 'haskell-indentation-mode)
 (add-hook 'haskell-mode-hook 'hindent-mode)
 (add-hook 'haskell-mode-hook 'adinapoli/haskell-fix-imports)

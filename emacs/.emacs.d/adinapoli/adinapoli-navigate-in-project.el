@@ -41,7 +41,7 @@
     (shell-command
      (format "ctags -f %s -e -R %s" tags-file-name tags-directory))))
 
-(add-hook 'haskell-mode-hook 'turn-on-ctags-auto-update-mode)
+;;(add-hook 'haskell-mode-hook 'turn-on-ctags-auto-update-mode)
 
 (define-key evil-normal-state-map (kbd "gf") (lambda () (interactive) (find-tag (find-tag-default-as-regexp))))
 (define-key evil-normal-state-map (kbd "gb") 'pop-tag-mark)
