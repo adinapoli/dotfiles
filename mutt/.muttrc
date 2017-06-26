@@ -1,0 +1,21 @@
+# Show the sidebar
+
+set sidebar_visible
+set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
+set mail_check_stats
+
+# Save and sync my sent messages
+set record=~/mail/Sent
+set spoolfile=~/mail/INBOX
+# set header cache
+set header_cache=~/localmail/hcache
+# needed for maildir format
+set mbox_type=Maildir
+set folder=~/mail/
+
+mailboxes =INBOX \
+=Sent \
+=Drafts \
+=Junk \
+=Trash \
+=Lastfolder
