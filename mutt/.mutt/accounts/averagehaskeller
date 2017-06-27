@@ -1,0 +1,14 @@
+set from      = "averagehaskeller@gmail.com"
+set mbox      = "+averagehaskeller/archive"
+set postponed = "+averagehaskeller/drafts"
+set from      = "averagehaskeller@gmail.com"
+set status_format = "───[ Folder: %f ]───[%r%m AVERAGE messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
+
+color status green default
+
+unmailboxes *
+mailboxes +averagehaskeller/INBOX \
++averagehaskeller/sent \
++averagehaskeller/drafts \
++averagehaskeller/junk \
++averagehaskeller/trash

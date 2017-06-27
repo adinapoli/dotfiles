@@ -28,7 +28,7 @@
 (adinapoli/install-and-require 'flycheck-rust)
 
 (add-hook 'flycheck-mode-hook #'flycheck-rust-setup)
-(add-hook 'before-save-hook #'rust-format-buffer)
+;;(add-hook 'before-save-hook #'rust-format-buffer)
 
 (provide 'adinapoli-rust)
 ;;; adinapoli-rust.el ends here

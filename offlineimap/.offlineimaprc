@@ -1,0 +1,129 @@
+
+# Get new tokens at: https://console.developers.google.com/apis/api/gmail.googleapis.com/overview
+
+[general]
+metadata = ~/.offlineimap
+accounts = AverageHaskeller, Personal
+maxsyncaccounts = 10
+ui = TTY.TTYUI
+ignore-readonly = no
+pythonfile = ~/.offlineimap.py
+socktimeout = 30
+fsync = false
+
+[mbnames]
+filename = ~/mail/muttrc.mailboxes
+header = "mailboxes "
+peritem = "+%(accountname)s/%(foldername)s"
+sep = " "
+footer = "\n"
+
+[Account AverageHaskeller]
+localrepository = LocalAverageHaskeller
+remoterepository = RemoteAverageHaskeller
+autorefresh = 2.5
+maxage = 2016-01-01
+synclabels = yes
+ignorelabels = \Inbox, \Starred, \Sent, \Draft, \Spam, \Trash, \Important
+
+[Repository LocalAverageHaskeller]
+type = Maildir
+localfolders = ~/mail/averagehaskeller
+sep = /
+sync_deletes = no
+
+[Repository GmailLocalAverageHaskeller]
+type = GmailMaildir
+
+[Repository RemoteAverageHaskeller]
+type = IMAP
+remotepasseval = get_remote_password("averagehaskellerGmail")
+remotehost = imap.gmail.com
+starttls = no
+ssl = yes
+sslcacertfile=/usr/local/etc/openssl/cert.pem
+ssl_version = tls1_2
+tls_level = tls_secure
+remoteport = 993
+remoteuser = averagehaskeller@gmail.com
+auth_mechanisms = XOAUTH2
+oauth2_client_id_eval = get_xoauth2_client_id("averagehaskellerGmail")
+oauth2_client_secret_eval = get_xoauth2_client_secret("averagehaskellerGmail")
+#oauth2_access_token_eval = get_xoauth2_access_token("averagehaskellerGmail")
+oauth2_request_url = https://accounts.google.com/o/oauth2/token
+oauth2_refresh_token_eval = get_xoauth2_refresh_token("averagehaskellerGmail")
+remotepasseval = get_remote_password("averagehaskellerGmail")
+idlefolders = ['INBOX']
+usecompression = no
+maxconnections = 1
+expunge = no
+nametrans = lambda folder: {'[Gmail]/Drafts': 'drafts',
+                            '[Gmail]/Sent Mail': 'sent',
+                            '[Gmail]/Starred': 'starred',
+                            '[Gmail]/Trash': 'trash',
+                            '[Gmail]/All Mail': 'archive',
+                            }.get(folder, folder)
+folderfilter = lambda folder: folder not in ['[Gmail]/Trash',
+                                             '[Gmail]/Important',
+                                             '[Gmail]/Spam',
+                                             ]
+createfolders = True
+sync_deletes = yes
+
+[Repository GmailAverageHaskeller]
+type = Gmail
+remoteuser = averagehaskeller@gmail.com
+remotepasseval = get_remote_password("averagehaskellerGmail")
+
+# ------------------------------------------------------------------------------
+#
+# My personal account
+#
+# ------------------------------------------------------------------------------
+
+[Account Personal]
+localrepository = LocalPersonal
+remoterepository = RemotePersonal
+autorefresh = 2.5
+maxage = 2017-01-01
+synclabels = yes
+ignorelabels = \Inbox, \Starred, \Sent, \Draft, \Spam, \Trash, \Important
+
+[Repository LocalPersonal]
+type = Maildir
+localfolders = ~/mail/personal
+sep = /
+sync_deletes = no
+
+[Repository RemotePersonal]
+type = Gmail
+remotepasseval = get_remote_password("personal")
+remotehost = imap.gmail.com
+starttls = no
+ssl = yes
+sslcacertfile=/usr/local/etc/openssl/cert.pem
+ssl_version = tls1_2
+tls_level = tls_secure
+remoteport = 993
+remoteuser = alfredo.dinapoli@gmail.com
+auth_mechanisms = XOAUTH2
+oauth2_client_id_eval = get_xoauth2_client_id("personal")
+oauth2_client_secret_eval = get_xoauth2_client_secret("personal")
+#oauth2_access_token_eval = get_xoauth2_access_token("personal")
+oauth2_request_url = https://accounts.google.com/o/oauth2/token
+oauth2_refresh_token_eval = get_xoauth2_refresh_token("personal")
+idlefolders = ['INBOX']
+usecompression = no
+maxconnections = 1
+expunge = no
+nametrans = lambda foldername: re.sub(' ', '_', re.sub('^\[Gmail\]/', '', foldername)).lower()
+folderfilter = lambda folder: folder not in ['[Gmail]/Trash',
+                                             '[Gmail]/Bin',
+                                             '[Gmail]/Important',
+                                             '[Gmail]/Spam',
+                                             '[Gmail]/Junk (Gmail)',
+                                             'ffmpeg-users',
+                                             'haskell/ghc-dev'
+                                             ]
+createfolders = False
+sync_deletes = yes

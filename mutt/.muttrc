@@ -1,0 +1,16 @@
+# Predated by: http://stevelosh.com/blog/2012/10/the-homely-mutt/#getting-email
+
+source ~/.mutt/general
+source ~/.mutt/paths
+source ~/.mutt/vim-keys.rc
+
+# Load the accounts
+# ------------------------------------------------------------------------------
+folder-hook =averagehaskeller/* source ~/.mutt/accounts/averagehaskeller
+folder-hook =personal/* source ~/.mutt/accounts/personal
+
+# Cycle through mailboxes
+folder-hook =averagehaskeller/* 'macro index \Cn "c=personal/INBOX\n" "Next Mailbox"'
+folder-hook =personal/* 'macro index \Cn "c=averagehaskeller/INBOX\n" "Next Mailbox"'
+
+#source ~/.mutt/macros
