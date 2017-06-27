@@ -1,0 +1,2 @@
+macro index 1 '<sync-mailbox><enter-command>source ~/.mutt/accounts/averagehaskeller<enter><change-folder>!<enter>'
+macro index 2 '<sync-mailbox><enter-command>source ~/.mutt/accounts/personal<enter><change-folder>!<enter>'

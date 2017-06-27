@@ -1,0 +1,26 @@
+# Global settings
+SyncState *
+Expunge None
+
+# Averagehaskeller
+IMAPAccount averagehaskeller
+Host imap.gmail.com
+User averagehaskeller@gmail.com
+PassCmd "gpg --no-tty -dq /Users/adinapoli/Dropbox/dotfiles/.authinfo.json.gpg | jq -r .email.averagehaskellerGmail.password"
+SSLType IMAPS
+CertificateFile /usr/local/etc/openssl/cert.pem
+AuthMech XOAUTH2
+
+IMAPStore remote-averagehaskeller
+Account averagehaskeller
+
+MaildirStore local-averagehaskeller
+Path ~/mail/averagehaskeller/
+
+Channel averagehaskeller
+Master :remote-averagehaskeller:
+Slave :local-averagehaskeller:
+Patterns *
+Create Slave
+CopyArrivalDate yes
+

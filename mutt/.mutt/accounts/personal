@@ -1,0 +1,14 @@
+set from      = "alfredo.dinapoli@gmail.com"
+set mbox      = "+personal/inbox"
+set postponed = "+personal/drafts"
+set from="alfredo.dinapoli@gmail.com"
+set status_format = "───[ Folder: %f ]───[%r%m PERSONAL messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
+
+color status cyan default
+
+unmailboxes *
+mailboxes +personal/inbox \
++personal/sent \
++personal/drafts \
++personal/junk \
++personal/trash
