@@ -14,8 +14,9 @@ set status_chars  = " *%A"
 
 # ------------------------------------------------------------------------------
 alternates "(averagehaskeller@gmail\.com)|(alfredo.dinapoli@gmail\.com)"
-set use_from # change the From address within the editor
-set reverse_name # one pre-fills the From address when replying based on the account that received the original mail
+set realname = "Alfredo Di Napoli"
+set edit_headers          = yes #you can add cc, bcc, or change ur from input
+set reverse_name          # one pre-fills the From address when replying based on the account that received the original mail
 set imap_check_subscribed = yes # automatically poll subscribed mailboxes for new mail
 set sort                  = "threads"
 set sort_aux              = "reverse-last-date-received" #like gmail
@@ -27,9 +28,15 @@ set pager_stop                          # don't go to the next message automatic
 set pipe_decode                         # strip headers and eval mimes when piping
 set thorough_search                     # strip headers and eval mimes before searching
 set sig_dashes
+set fast_reply                  #skip to compose when replying
+set reply_to
+set use_from = yes
+set envelope_from = yes
 set include                             #include message in replies
 set forward_quote                       #include message in forwards
 bind editor \t          complete-query
+# always use SSL when connecting to a server
+set ssl_force_tls=yes
 
 # =============================================================================
 # === Mime ====================================================================
@@ -49,7 +56,8 @@ auto_view application/RTF
 auto_view text/html
 auto_view text/x-vcard
 auto_view image/tiff
-alternative_order text/enriched text/plain text
+# prefer plain text
+alternative_order text/plain text/enriched text/html
 
 # Header
 color header yellow default "From: "
@@ -66,7 +74,7 @@ color hdrdefault cyan default
 color attachment black default
 color error red default     #error messages
 color message white default #message informational messages
-color indicator brightwhite green #indicator for the "current message"
+#color indicator brightwhite green #indicator for the "current message"
 color status brightwhite default  #status lines in the folder index
 color tree red default      #the "tree" display of threads within the folder index
 color search white blue     #search matches found with search within the internal pager
