@@ -27,10 +27,10 @@ synclabels = yes
 ignorelabels = \Inbox, \Starred, \Sent, \Draft, \Spam, \Trash, \Important
 
 [Repository LocalAverageHaskeller]
-type = Maildir
+type = GmailMaildir
 localfolders = ~/mail/averagehaskeller
 sep = /
-sync_deletes = no
+sync_deletes = yes
 
 [Repository GmailLocalAverageHaskeller]
 type = GmailMaildir
@@ -63,8 +63,7 @@ nametrans = lambda folder: {'[Gmail]/Drafts': 'drafts',
                             '[Gmail]/Trash': 'trash',
                             '[Gmail]/All Mail': 'archive',
                             }.get(folder, folder)
-folderfilter = lambda folder: folder not in ['[Gmail]/Trash',
-                                             '[Gmail]/Important',
+folderfilter = lambda folder: folder not in ['[Gmail]/Important',
                                              '[Gmail]/Spam',
                                              ]
 createfolders = True
@@ -90,7 +89,7 @@ synclabels = yes
 ignorelabels = \Inbox, \Starred, \Sent, \Draft, \Spam, \Trash, \Important
 
 [Repository LocalPersonal]
-type = Maildir
+type = GmailMaildir
 localfolders = ~/mail/personal
 sep = /
 sync_deletes = no
