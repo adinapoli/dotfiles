@@ -1,5 +1,5 @@
 set from      = "averagehaskeller@gmail.com"
-set mbox      = "+averagehaskeller/archive"
+set mbox      = "+averagehaskeller/inbox"
 set postponed = "+averagehaskeller/drafts"
 set trash     = "+averagehaskeller/trash"
 set status_format = "───[ Folder: %f ]───[%r%m AVERAGE messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
@@ -11,8 +11,11 @@ color status green default
 #color indicator brightwhite blue # indicator for the "current message"
 
 unmailboxes *
-mailboxes +averagehaskeller/INBOX \
+mailboxes +averagehaskeller/inbox \
 +averagehaskeller/sent \
 +averagehaskeller/drafts \
 +averagehaskeller/junk \
 +averagehaskeller/trash
+
+# account-specific keybindings
+macro pager,index dd "<save-message>+averagehaskeller/trash<enter>" "move message to the trash"

@@ -24,7 +24,6 @@ bind index                      \Ce next-line
 bind index                      \Cy previous-line
 
 bind pager,index                d   noop
-bind pager,index                dd  delete-message
 
 # Threads
 bind browser,pager,index        N   search-opposite

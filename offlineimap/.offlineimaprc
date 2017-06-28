@@ -1,6 +1,3 @@
-
-# Get new tokens at: https://console.developers.google.com/apis/api/gmail.googleapis.com/overview
-
 [general]
 metadata = ~/.offlineimap
 accounts = AverageHaskeller, Personal
@@ -46,26 +43,16 @@ tls_level = tls_secure
 remoteport = 993
 remoteuser = averagehaskeller@gmail.com
 remotepasseval = get_remote_application_password("averagehaskellerGmail")
-#auth_mechanisms = XOAUTH2
-#oauth2_client_id_eval = get_xoauth2_client_id("averagehaskellerGmail")
-#oauth2_client_secret_eval = get_xoauth2_client_secret("averagehaskellerGmail")
-#oauth2_access_token_eval = get_xoauth2_access_token("averagehaskellerGmail")
-#oauth2_request_url = https://accounts.google.com/o/oauth2/token
-#oauth2_refresh_token_eval = get_xoauth2_refresh_token("averagehaskellerGmail")
 idlefolders = ['INBOX']
 usecompression = no
 maxconnections = 1
 expunge = no
-nametrans = lambda folder: {'[Gmail]/Drafts': 'drafts',
-                            '[Gmail]/Sent Mail': 'sent',
-                            '[Gmail]/Starred': 'starred',
-                            '[Gmail]/Trash': 'trash',
-                            '[Gmail]/All Mail': 'archive',
-                            }.get(folder, folder)
+nametrans = lambda foldername: re.sub(' ', '_', re.sub('^\[Gmail\]/', '', foldername)).lower()
 folderfilter = lambda folder: folder not in ['[Gmail]/Important',
                                              '[Gmail]/Spam',
+                                             '[Gmail]/All Mail',
                                              ]
-createfolders = True
+createfolders = False
 sync_deletes = yes
 
 # ------------------------------------------------------------------------------
@@ -99,20 +86,60 @@ ssl_version = tls1_2
 tls_level = tls_secure
 remoteport = 993
 remoteuser = alfredo.dinapoli@gmail.com
-#auth_mechanisms = XOAUTH2
-#oauth2_client_id_eval = get_xoauth2_client_id("personal")
-#oauth2_client_secret_eval = get_xoauth2_client_secret("personal")
-##oauth2_access_token_eval = get_xoauth2_access_token("personal")
-#oauth2_request_url = https://accounts.google.com/o/oauth2/token
-#oauth2_refresh_token_eval = get_xoauth2_refresh_token("personal")
 idlefolders = ['INBOX']
 usecompression = no
 maxconnections = 1
 expunge = no
-nametrans = lambda foldername: re.sub(' ', '_', re.sub('^\[Gmail\]/', '', foldername)).lower()
+nametrans = lambda foldername: { '[Gmail]/Bin': 'trash'
+                               }.get(foldername, re.sub(' ', '_', re.sub('^\[Gmail\]/', '', foldername)).lower())
 folderfilter = lambda folder: folder not in ['[Gmail]/Trash',
-                                             '[Gmail]/Bin',
                                              '[Gmail]/Important',
+                                             '[Gmail]/Spam',
+                                             '[Gmail]/Junk (Gmail)',
+                                             'ffmpeg-users',
+                                             'haskell/ghc-dev'
+                                             ]
+createfolders = False
+sync_deletes = yes
+
+# ------------------------------------------------------------------------------
+#
+# IRIS Connect
+#
+# ------------------------------------------------------------------------------
+
+[Account IRIS]
+localrepository = LocalIRIS
+remoterepository = RemoteIRIS
+autorefresh = 5
+maxage = 2017-01-01
+synclabels = yes
+ignorelabels = \Inbox, \Starred, \Sent, \Draft, \Spam, \Trash, \Important
+
+[Repository LocalIRIS]
+type = GmailMaildir
+localfolders = ~/mail/iris
+sep = /
+sync_deletes = no
+
+[Repository RemoteIRIS]
+type = Gmail
+remotepasseval = get_remote_application_password("iris")
+remotehost = imap.gmail.com
+starttls = no
+ssl = yes
+sslcacertfile=/usr/local/etc/openssl/cert.pem
+ssl_version = tls1_2
+tls_level = tls_secure
+remoteport = 993
+remoteuser = alfredo@irisconnect.co.uk
+idlefolders = ['INBOX']
+usecompression = no
+maxconnections = 1
+expunge = no
+nametrans = lambda foldername: { '[Gmail]/Bin': 'trash'
+                               }.get(foldername, re.sub(' ', '_', re.sub('^\[Gmail\]/', '', foldername)).lower())
+folderfilter = lambda folder: folder not in ['[Gmail]/Important',
                                              '[Gmail]/Spam',
                                              '[Gmail]/Junk (Gmail)',
                                              'ffmpeg-users',
