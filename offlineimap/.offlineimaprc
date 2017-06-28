@@ -5,7 +5,7 @@
 metadata = ~/.offlineimap
 accounts = AverageHaskeller, Personal
 maxsyncaccounts = 10
-ui = TTY.TTYUI
+ui = ttyui
 ignore-readonly = no
 pythonfile = ~/.offlineimap.py
 socktimeout = 30
@@ -36,8 +36,7 @@ sync_deletes = yes
 type = GmailMaildir
 
 [Repository RemoteAverageHaskeller]
-type = IMAP
-remotepasseval = get_remote_password("averagehaskellerGmail")
+type = Gmail
 remotehost = imap.gmail.com
 starttls = no
 ssl = yes
@@ -46,13 +45,13 @@ ssl_version = tls1_2
 tls_level = tls_secure
 remoteport = 993
 remoteuser = averagehaskeller@gmail.com
-auth_mechanisms = XOAUTH2
-oauth2_client_id_eval = get_xoauth2_client_id("averagehaskellerGmail")
-oauth2_client_secret_eval = get_xoauth2_client_secret("averagehaskellerGmail")
+remotepasseval = get_remote_application_password("averagehaskellerGmail")
+#auth_mechanisms = XOAUTH2
+#oauth2_client_id_eval = get_xoauth2_client_id("averagehaskellerGmail")
+#oauth2_client_secret_eval = get_xoauth2_client_secret("averagehaskellerGmail")
 #oauth2_access_token_eval = get_xoauth2_access_token("averagehaskellerGmail")
-oauth2_request_url = https://accounts.google.com/o/oauth2/token
-oauth2_refresh_token_eval = get_xoauth2_refresh_token("averagehaskellerGmail")
-remotepasseval = get_remote_password("averagehaskellerGmail")
+#oauth2_request_url = https://accounts.google.com/o/oauth2/token
+#oauth2_refresh_token_eval = get_xoauth2_refresh_token("averagehaskellerGmail")
 idlefolders = ['INBOX']
 usecompression = no
 maxconnections = 1
@@ -68,11 +67,6 @@ folderfilter = lambda folder: folder not in ['[Gmail]/Important',
                                              ]
 createfolders = True
 sync_deletes = yes
-
-[Repository GmailAverageHaskeller]
-type = Gmail
-remoteuser = averagehaskeller@gmail.com
-remotepasseval = get_remote_password("averagehaskellerGmail")
 
 # ------------------------------------------------------------------------------
 #
@@ -96,7 +90,7 @@ sync_deletes = no
 
 [Repository RemotePersonal]
 type = Gmail
-remotepasseval = get_remote_password("personal")
+remotepasseval = get_remote_application_password("personal")
 remotehost = imap.gmail.com
 starttls = no
 ssl = yes
@@ -105,12 +99,12 @@ ssl_version = tls1_2
 tls_level = tls_secure
 remoteport = 993
 remoteuser = alfredo.dinapoli@gmail.com
-auth_mechanisms = XOAUTH2
-oauth2_client_id_eval = get_xoauth2_client_id("personal")
-oauth2_client_secret_eval = get_xoauth2_client_secret("personal")
-#oauth2_access_token_eval = get_xoauth2_access_token("personal")
-oauth2_request_url = https://accounts.google.com/o/oauth2/token
-oauth2_refresh_token_eval = get_xoauth2_refresh_token("personal")
+#auth_mechanisms = XOAUTH2
+#oauth2_client_id_eval = get_xoauth2_client_id("personal")
+#oauth2_client_secret_eval = get_xoauth2_client_secret("personal")
+##oauth2_access_token_eval = get_xoauth2_access_token("personal")
+#oauth2_request_url = https://accounts.google.com/o/oauth2/token
+#oauth2_refresh_token_eval = get_xoauth2_refresh_token("personal")
 idlefolders = ['INBOX']
 usecompression = no
 maxconnections = 1
