@@ -1,13 +1,17 @@
 set from      = "alfredo.dinapoli@gmail.com"
+set realname  = "Alfredo Di Napoli"
 set mbox      = "+personal/inbox"
 set postponed = "+personal/drafts"
 set from="alfredo.dinapoli@gmail.com"
 set status_format = "───[ Folder: %f ]───[%r%m PERSONAL messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
 
-color status cyan default
+color status blue default
+color indicator brightwhite blue # indicator for the "current message"
 
 unmailboxes *
 mailboxes +personal/inbox \
++personal/life \
++personal/dad \
 +personal/sent \
 +personal/drafts \
 +personal/junk \
