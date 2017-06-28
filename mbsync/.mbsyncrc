@@ -6,16 +6,16 @@ Expunge None
 IMAPAccount averagehaskeller
 Host imap.gmail.com
 User averagehaskeller@gmail.com
-PassCmd "gpg --no-tty -dq /Users/adinapoli/Dropbox/dotfiles/.authinfo.json.gpg | jq -r .email.averagehaskellerGmail.password"
+PassCmd "gpg --no-tty -dq /Users/adinapoli/Dropbox/dotfiles/.authinfo.json.gpg | jq -r .email.averagehaskellerGmail.applicationPassword"
 SSLType IMAPS
 CertificateFile /usr/local/etc/openssl/cert.pem
-AuthMech XOAUTH2
+AuthMech *
 
 IMAPStore remote-averagehaskeller
 Account averagehaskeller
 
 MaildirStore local-averagehaskeller
-Path ~/mail/averagehaskeller/
+Path ~/mail/test/
 
 Channel averagehaskeller
 Master :remote-averagehaskeller:
