@@ -1,0 +1,24 @@
+On 17-06-30 at 04:14P, Philip Cunningham wrote:
+> filib commented on this pull request.
+> 
+> 
+> 
+> >  
+> -    .open-insecure-options-content
+> -      .user-notice-callout.user-notice-callout-danger
+> -        %h4
+> -          = _("Non-encrypted streaming")
+> -        = _("The below options are avaliable to enable de-bugging or for demos of the system only.")
+> -        = _("They are not recommended as a permanent setting for an organization.")
+> +    .row-fluid
+> +      .span12
+> +        %strong.blue-text
+> +          = _("Not working as expected?")
+> +        = _("Make sure you've whitelisted our URLs. You can find these on our help pages below.")
+> 
+> The wording is more explanatory than in the screenshot.
+> 
+> -- 
+> You are receiving this because you were mentioned.
+> Reply to this email directly or view it on GitHub:
+> https://github.com/iconnect/agora/pull/4839#pullrequestreview-47433821

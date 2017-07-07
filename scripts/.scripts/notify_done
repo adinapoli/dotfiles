@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+reattach-to-user-namespace osascript -e 'display notification "Action Completed" with title "(system attribute \"NAME\")"'

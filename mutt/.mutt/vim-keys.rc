@@ -13,6 +13,12 @@ bind pager                      k   previous-line
 bind pager                      j   next-line
 bind index <space>  collapse-thread
 
+#Sidebar
+bind pager,index <up> sidebar-prev
+bind pager,index <down> sidebar-next
+bind pager,index <right> sidebar-open
+
+
 # Scrolling
 bind attach,browser,pager,index \CF next-page
 bind attach,browser,pager,index \CB previous-page
@@ -24,7 +30,6 @@ bind index                      \Ce next-line
 bind index                      \Cy previous-line
 
 bind pager,index                d   noop
-bind pager,index                dd  delete-message
 
 # Threads
 bind browser,pager,index        N   search-opposite

@@ -1,0 +1,34 @@
+set from      = "alfredo@irisconnect.co.uk"
+set realname  = "Alfredo Di Napoli"
+set mbox      = "+personal/inbox"
+set postponed = "+personal/drafts"
+set status_format = "───[ Folder: %f ]───[%r%m IRIS messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
+set sendmail = "/usr/local/bin/msmtp -a iris"
+set sendmail_wait = 0
+unset record
+unset alias_file
+
+set alias_file=/Users/adinapoli/Dropbox/dotfiles/.mutt/aliases/iris
+source $alias_file
+
+folder-hook +iris/github unset signature set editor=vim set content_type=text/plain
+
+color status yellow default
+color indicator brightwhite yellow # indicator for the "current message"
+
+#For the signature to work
+set editor = "~/.mutt/html_editor"
+set content_type=text/html
+unset signature
+set signature = /Users/adinapoli/Dropbox/dotfiles/.mutt/signatures/iris.html
+
+unmailboxes *
+mailboxes +iris/inbox \
++iris/github \
++iris/sent \
++iris/drafts \
++iris/junk \
++iris/trash
+
+# account-specific keybindings
+macro pager,index dd ":set confirmappend=no\n<save-message>+iris/trash<enter>" "move message to the trash"

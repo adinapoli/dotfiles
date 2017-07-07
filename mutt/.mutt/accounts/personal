@@ -2,11 +2,18 @@ set from      = "alfredo.dinapoli@gmail.com"
 set realname  = "Alfredo Di Napoli"
 set mbox      = "+personal/inbox"
 set postponed = "+personal/drafts"
-set from="alfredo.dinapoli@gmail.com"
 set status_format = "───[ Folder: %f ]───[%r%m PERSONAL messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
+set sendmail = "/usr/local/bin/msmtp -a personal"
+set sendmail_wait = 0
+unset record
+unset alias_file
+
+set alias_file=/Users/adinapoli/Dropbox/dotfiles/.mutt/aliases/personal
+source $alias_file
 
 color status blue default
 color indicator brightwhite blue # indicator for the "current message"
+set content_type=text/plain
 
 unmailboxes *
 mailboxes +personal/inbox \
@@ -16,3 +23,6 @@ mailboxes +personal/inbox \
 +personal/drafts \
 +personal/junk \
 +personal/trash
+
+# account-specific keybindings
+macro pager,index dd ":set confirmappend=no\n<save-message>+personal/trash<enter>" "move message to the trash"
