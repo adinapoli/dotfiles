@@ -1,6 +1,6 @@
 [general]
 metadata = ~/.offlineimap
-accounts = AverageHaskeller, Personal
+accounts = AverageHaskeller, Personal, IRIS
 maxsyncaccounts = 10
 ui = ttyui
 ignore-readonly = no
@@ -73,7 +73,7 @@ ignorelabels = \Inbox, \Starred, \Sent, \Draft, \Spam, \Trash, \Important
 type = GmailMaildir
 localfolders = ~/mail/personal
 sep = /
-sync_deletes = no
+sync_deletes = yes
 
 [Repository RemotePersonal]
 type = Gmail
@@ -142,8 +142,52 @@ nametrans = lambda foldername: { '[Gmail]/Bin': 'trash'
 folderfilter = lambda folder: folder not in ['[Gmail]/Important',
                                              '[Gmail]/Spam',
                                              '[Gmail]/Junk (Gmail)',
-                                             'ffmpeg-users',
-                                             'haskell/ghc-dev'
+                                             '[Gmail]/All Mail'
+                                             ]
+createfolders = False
+sync_deletes = yes
+
+# ------------------------------------------------------------------------------
+#
+# IOHK
+#
+# ------------------------------------------------------------------------------
+
+[Account IOHK]
+localrepository = LocalIOHK
+remoterepository = RemoteIOHK
+autorefresh = 5
+maxage = 2017-01-01
+synclabels = yes
+ignorelabels = \Inbox, \Starred, \Sent, \Draft, \Spam, \Trash, \Important
+
+[Repository LocalIOHK]
+type = GmailMaildir
+localfolders = ~/mail/iohk
+sep = /
+sync_deletes = no
+
+[Repository RemoteIOHK]
+type = Gmail
+remotehost = imap.gmail.com
+starttls = no
+ssl = yes
+sslcacertfile=/usr/local/etc/openssl/cert.pem
+ssl_version = tls1_2
+tls_level = tls_secure
+remoteport = 993
+remoteuser = alfredo.dinapoli@iohk.io
+remotepasseval = get_remote_application_password("iohk")
+idlefolders = ['INBOX']
+usecompression = no
+maxconnections = 1
+expunge = no
+nametrans = lambda foldername: { '[Gmail]/Trash': 'trash'
+                               }.get(foldername, re.sub(' ', '_', re.sub('^\[Gmail\]/', '', foldername)).lower())
+folderfilter = lambda folder: folder not in ['[Gmail]/Important',
+                                             '[Gmail]/Spam',
+                                             '[Gmail]/Junk (Gmail)',
+                                             '[Gmail]/All Mail'
                                              ]
 createfolders = False
 sync_deletes = yes
