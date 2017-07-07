@@ -28,7 +28,8 @@ mailboxes +iris/inbox \
 +iris/sent \
 +iris/drafts \
 +iris/junk \
-+iris/trash
++iris/trash \
++temporary/search
 
 # account-specific keybindings
 macro pager,index dd ":set confirmappend=no\n<save-message>+iris/trash<enter>" "move message to the trash"

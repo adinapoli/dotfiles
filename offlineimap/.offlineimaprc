@@ -16,6 +16,7 @@ sep = " "
 footer = "\n"
 
 [Account AverageHaskeller]
+postsynchook = notmuch new
 localrepository = LocalAverageHaskeller
 remoterepository = RemoteAverageHaskeller
 autorefresh = 2.5
@@ -62,6 +63,7 @@ sync_deletes = yes
 # ------------------------------------------------------------------------------
 
 [Account Personal]
+postsynchook = notmuch new
 localrepository = LocalPersonal
 remoterepository = RemotePersonal
 autorefresh = 2.5
@@ -109,6 +111,7 @@ sync_deletes = yes
 # ------------------------------------------------------------------------------
 
 [Account IRIS]
+postsynchook = notmuch new
 localrepository = LocalIRIS
 remoterepository = RemoteIRIS
 autorefresh = 5
@@ -154,6 +157,7 @@ sync_deletes = yes
 # ------------------------------------------------------------------------------
 
 [Account IOHK]
+postsynchook = notmuch new
 localrepository = LocalIOHK
 remoterepository = RemoteIOHK
 autorefresh = 5

@@ -1,9 +1,9 @@
 
 # Show the sidebar
 # ------------------------------------------------------------------------------
-set sidebar_visible
-set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
 set mail_check_stats
+set sidebar_visible
+set sidebar_format = "%B%?F? [%F]?%* %N/%S"
 color sidebar_new color221 color233
 
 # Status bar

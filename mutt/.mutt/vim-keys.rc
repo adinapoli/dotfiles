@@ -39,3 +39,9 @@ bind pager,index                gt  next-thread
 bind pager,index                gT  previous-thread
 bind index                      za  collapse-thread
 bind index                      zA  collapse-all # Missing :folddisable/foldenable
+
+# Opening urls in Mutt
+
+macro pager l "<enter-command>unset wait_key<enter><pipe-message>urlscan<enter>" "Follow links with urlscan"
+macro index S "<enter-command>unset wait_key<enter><shell-escape>mutt-notmuch-py \
+~/mail/temporary/search<enter><change-folder-readonly>+temporary/search<enter>" "search mail (using notmuch)"
