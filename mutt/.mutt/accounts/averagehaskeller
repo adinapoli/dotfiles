@@ -8,7 +8,7 @@ set sendmail_wait = 0
 unset record
 
 color status green default
-#color indicator brightwhite blue # indicator for the "current message"
+color indicator brightwhite green # indicator for the "current message"
 
 unmailboxes *
 mailboxes +averagehaskeller/inbox \

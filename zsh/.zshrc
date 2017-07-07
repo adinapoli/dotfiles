@@ -18,3 +18,14 @@ bindkey '^N' history-search-forward
 setopt AUTO_CD
 
 source $HOME/.zsh-aliases
+
+# Needed for emacs-tramp to work
+if [ "$TERM" = "dumb" ]
+then
+unsetopt zle
+unsetopt prompt_cr
+unsetopt prompt_subst
+# unfunction precmd # these two are not
+# unfunction preexec # working for me
+PS1='$ '
+fi

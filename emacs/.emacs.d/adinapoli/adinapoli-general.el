@@ -129,5 +129,10 @@
 (adinapoli/set-var-from-zsh "PATH")
 (adinapoli/set-var-from-zsh "DYLD_LIBRARY_PATH")
 
+;;tramp
+(require 'tramp)
+(setq tramp-ssh-controlmaster-options
+      "-o ControlMaster=auto -o ControlPath='tramp.%%C' -o ControlPersist=no")
+
 (provide 'adinapoli-general)
 ;;; adinapoli-general.el ends here

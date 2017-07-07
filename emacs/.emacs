@@ -34,7 +34,8 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (## yaml-mode shackle rust-mode purescript-mode neotree markdown-mode jedi intero hindent helm-themes helm-projectile go-mode flycheck-rust flycheck-elm evil-leader emmet-mode elscreen elm-mode ctags-update ag))))
+    (## yaml-mode shackle rust-mode purescript-mode neotree markdown-mode jedi intero hindent helm-themes helm-projectile go-mode flycheck-rust flycheck-elm evil-leader emmet-mode elscreen elm-mode ctags-update ag)))
+ '(tramp-verbose 6))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

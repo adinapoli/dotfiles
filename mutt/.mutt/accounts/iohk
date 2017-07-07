@@ -1,0 +1,21 @@
+set from      = "alfredo.dinapoli@iohk.io"
+set realname  = "Alfredo Di Napoli"
+set mbox      = "+iohk/inbox"
+set postponed = "+iohk/drafts"
+set status_format = "───[ Folder: %f ]───[%r%m IOHK messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
+set sendmail = "/usr/local/bin/msmtp -a iohk"
+set sendmail_wait = 0
+unset record
+
+color status yellow default
+color indicator brightwhite magenta # indicator for the "current message"
+
+unmailboxes *
+mailboxes +iohk/inbox \
++iohk/sent \
++iohk/drafts \
++iohk/junk \
++iohk/trash
+
+# account-specific keybindings
+macro pager,index dd "<save-message>+iohk/trash<enter>" "move message to the trash"
