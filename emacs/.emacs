@@ -34,8 +34,17 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (## yaml-mode shackle rust-mode purescript-mode neotree markdown-mode jedi intero hindent helm-themes helm-projectile go-mode flycheck-rust flycheck-elm evil-leader emmet-mode elscreen elm-mode ctags-update ag)))
- '(tramp-verbose 6))
+    (## yaml-mode shackle rust-mode purescript-mode neotree markdown-mode jedi intero hindent helm-themes helm-projectile go-mode flycheck-rust flycheck-elm evil-leader emmet-mode elscreen elm-mode ag)))
+ '(safe-local-variable-values
+   (quote
+    ((haskell-tags-on-save)
+     (haskell-tags-on-save . f)
+     (haskell-stylish-on-save . t)
+     (haskell-indent-spaces . 4)
+     (haskell-indentation-layout-offset . 4)
+     (haskell-indentation-left-offset . 4)
+     (haskell-indentation-starter-offset . 4))))
+ '(tramp-verbose 6 nil (tramp)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

@@ -16,32 +16,20 @@
   :group 'haskell)
 
 (install-and-require #'haskell-mode)
-;(install-and-require #'ghc)
-(load-and-use #'hsenv)
 (load-and-use #'web-mode)
 (load-and-use #'helm-hoogle)
 (install-and-require #'hindent)
-;; (install-and-require #'company-ghc)
 
 (add-hook 'haskell-mode-hook 'haskell-indentation-mode)
 (add-hook 'haskell-mode-hook #'hindent-mode)
 
 (setq haskell-program-name "ghci")
 
-;; ghc-mod does not support cabal-1.22 and ghc-7.8.4
-;;(autoload 'ghc-init "ghc" nil t)
-;;(autoload 'ghc-debug "ghc" nil t)
-;;(add-hook 'haskell-mode-hook (lambda () (ghc-init)))
-;; (add-to-list 'company-backends 'company-ghc)
-;; (custom-set-variables '(company-ghc-show-info t))
-
-(defun complete-or-indent ()
-  (interactive)
-  (if (company-manual-begin)
-    (company-complete-common)
-    (indent-according-to-mode)))
-
-(defconst hidden-packages '("monads-tf" "MonadCatchIO-mtl"))
+;(defun complete-or-indent ()
+;  (interactive)
+;  (if (company-manual-begin)
+;    (company-complete-common)
+;    (indent-according-to-mode)))
 
 (flycheck-define-checker haskell-stack
   "A Haskell syntax and type checker using ghc.
@@ -88,32 +76,6 @@
   :modes (haskell-mode literate-haskell-mode)
   :next-checkers ((warning . haskell-hlint)))
 
-(flycheck-define-checker haskell-ghcmod
-   "A Haskell syntax and type checker using ghc-mod"
-   :command ("ghc-mod" "check" source-inplace)
-   :error-patterns
-   ((warning line-start (file-name) ":" line ":" column ":"
-             (or " " "\n    ") "Warning:" (optional "\n")
-             (one-or-more " ")
-             (message (one-or-more not-newline)
-                      (zero-or-more "\n"
-                                    (one-or-more " ")
-                                    (one-or-more not-newline)))
-             line-end)
-    (error line-start (file-name) ":" line ":" column ":"
-           (or (message (one-or-more not-newline))
-               (and "\n" (one-or-more " ")
-                    (message (one-or-more not-newline)
-                             (zero-or-more "\n"
-                                           (one-or-more " ")
-                                           (one-or-more not-newline)))))
-           line-end))
-   :modes haskell-mode
-   :next-checkers ((warnings-only . haskell-hlint)))
-;; ghc-mod does not support cabal-1.22 and ghc-7.8.4
-;(add-to-list 'flycheck-checkers 'haskell-ghcmod)
-
-;(add-to-list 'flycheck-disabled-checkers 'haskell-ghc)
 (add-to-list 'flycheck-checkers 'haskell-stack)
 
 ;;; CUSTOM KEYMAPS

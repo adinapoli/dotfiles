@@ -8,6 +8,8 @@ set sendmail_wait = 0
 unset record
 unset alias_file
 
+set index_format = "%4C %Z %{%b %d %r} %-25.25L (%?l?%4l&%4c?) %s"
+
 set alias_file=/Users/adinapoli/Dropbox/dotfiles/.mutt/aliases/iris
 source $alias_file
 

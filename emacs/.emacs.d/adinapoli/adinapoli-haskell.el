@@ -33,7 +33,8 @@
 
 (add-hook 'haskell-mode-hook 'haskell-indentation-mode)
 (add-hook 'haskell-mode-hook 'hindent-mode)
-(add-hook 'haskell-mode-hook 'adinapoli/haskell-fix-imports)
+; Comment until I don't have a better story with .dir-locals.el
+;(add-hook 'haskell-mode-hook 'adinapoli/haskell-fix-imports)
 
 (provide 'adinapoli-haskell)
 ;;; adinapoli-haskell.el ends here

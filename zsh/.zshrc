@@ -29,3 +29,6 @@ unsetopt prompt_subst
 # unfunction preexec # working for me
 PS1='$ '
 fi
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"

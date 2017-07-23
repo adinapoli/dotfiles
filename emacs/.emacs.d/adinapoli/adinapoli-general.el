@@ -24,11 +24,20 @@
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
 
-(when (>= emacs-major-version 24)
-  (require 'package)
-  (package-initialize)
-  (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
-  )
+(setq tls-program '("gnutls-cli --strict-tofu -p %p %h"))
+(require 'package)
+
+(setq package-archives '(("melpa" . "https://melpa.org/packages/")
+                         ("melpa-stable" . "https://stable.melpa.org/packages/")
+                        )
+)
+
+(setq package-pinned-packages
+      '((evil                 . "melpa-stable")
+       )
+)
+
+(package-initialize)
 
 (defun adinapoli/install-and-require (pkg)
   (when (not (package-installed-p pkg))

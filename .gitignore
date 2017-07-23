@@ -10,3 +10,5 @@ emacs/.emacs.d/var/
 emacs/.emacs.d/url/
 emacs/.emacs.d/auto-save-list/
 emacs/.emacs.d/projectile-bookmarks.eld
+ghci/.ghc/ghci_history
+mutt/.mutt/temp/*
