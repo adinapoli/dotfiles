@@ -26,6 +26,10 @@
 (adinapoli/install-and-require 'projectile)
 (adinapoli/install-and-require 'helm-projectile)
 (adinapoli/install-and-require 'helm-themes)
+(adinapoli/install-and-require 'grizzl)
+
+;; https://emacs.stackexchange.com/questions/29096/how-to-sort-directories-first-in-dired
+(setq dired-use-ls-dired  nil)
 
 (require 'helm-config)
 (setq helm-ff-lynx-style-map nil
@@ -45,9 +49,10 @@
     (interactive)
     (if (string= default-directory "~/")
         (message "You can't projectile in the home.")
-        (progn 
+        (progn
             (setq saved-default-directory default-directory)
             (dired default-directory)
+            (message "Starting helm-projectile")
             (helm-projectile)
             (adinapoli/kill-all-buffers-by-mode "dired-mode")
             (setq default-directory saved-default-directory))))

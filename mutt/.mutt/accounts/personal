@@ -11,6 +11,7 @@ unset alias_file
 set alias_file=/Users/adinapoli/Dropbox/dotfiles/.mutt/aliases/personal
 source $alias_file
 
+unset signature
 color status blue default
 color indicator brightwhite blue # indicator for the "current message"
 set content_type=text/plain

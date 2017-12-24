@@ -27,13 +27,15 @@
 (setq tls-program '("gnutls-cli --strict-tofu -p %p %h"))
 (require 'package)
 
-(setq package-archives '(("melpa" . "https://melpa.org/packages/")
-                         ("melpa-stable" . "https://stable.melpa.org/packages/")
+(setq package-archives '(("melpa" . "http://melpa.org/packages/")
+                         ("melpa-stable" . "http://stable.melpa.org/packages/")
                         )
 )
 
 (setq package-pinned-packages
       '((evil                 . "melpa-stable")
+        (evil-leader          . "melpa-stable")
+        (helm                 . "melpa-stable")
        )
 )
 

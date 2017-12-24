@@ -32,12 +32,18 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ansi-color-names-vector
+   ["black" "#d55e00" "#009e73" "#f8ec59" "#0072b2" "#cc79a7" "#56b4e9" "white"])
+ '(kaolin-hl-line-colored t)
  '(package-selected-packages
    (quote
-    (## yaml-mode shackle rust-mode purescript-mode neotree markdown-mode jedi intero hindent helm-themes helm-projectile go-mode flycheck-rust flycheck-elm evil-leader emmet-mode elscreen elm-mode ag)))
+    (doom-themes nord-theme kaolin-themes fill-column-indicator cyberpunk-theme json-mode fzf ## yaml-mode shackle rust-mode purescript-mode neotree markdown-mode jedi intero hindent helm-themes helm-projectile go-mode flycheck-rust flycheck-elm emmet-mode elscreen elm-mode ag)))
  '(safe-local-variable-values
    (quote
-    ((haskell-tags-on-save)
+    ((haskell-indent-offset . 4)
+     (haskell-indentation-where-pre-offset . 2)
+     (haskell-indentation-where-post-offset . 2)
+     (haskell-tags-on-save)
      (haskell-tags-on-save . f)
      (haskell-stylish-on-save . t)
      (haskell-indent-spaces . 4)

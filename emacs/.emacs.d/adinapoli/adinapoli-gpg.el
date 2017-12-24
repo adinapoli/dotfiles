@@ -24,5 +24,8 @@
 (epa-file-enable)
 (setq epa-file-select-keys nil)
 
+;; Force Emacs to use its own password prompt, not OS' one.
+(setenv "GPG_AGENT_INFO" nil)
+
 (provide 'adinapoli-gpg)
 ;;; adinapoli-gpg.el ends here
