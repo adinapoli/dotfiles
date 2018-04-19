@@ -1,6 +1,6 @@
 
-nnoremap <C-p> :FuzzyOpen<CR>
-nmap <leader>. :FuzzyGrep<CR>
+nnoremap <C-p> :FZF<CR>
+let $FZF_DEFAULT_OPTS .= ' --no-height'
 
 " Searching
 set hlsearch

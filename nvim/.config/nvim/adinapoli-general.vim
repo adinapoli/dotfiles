@@ -3,8 +3,11 @@
 set termguicolors
 
 " Theme
-syntax enable
-colorscheme OceanicNext
+" colorscheme OceanicNext
+colorscheme challenger_deep
+
+syntax on
+filetype plugin indent on
 
 " Remember more history
 set history=1000
@@ -50,3 +53,9 @@ set statusline+=%7*\ %=\ row:%l/%L\             "Rownumber/total (%)
 set statusline+=%8*\ col:%03c\                            "Colnr
 set statusline+=%9*\ \ %m%r%w\ %P\ \                      "Modified? Readonly? Top/bot.
 set statusline+=%9*\ %{strftime('🕐\ %d/%m/%y\ %I:%M')}
+
+
+" https://superuser.com/questions/815416/hitting-enter-in-the-quickfix-window-doesnt-work
+" In the quickfix window, <CR> is used to jump to the error under the
+" cursor, so undefine the mapping there.
+autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
