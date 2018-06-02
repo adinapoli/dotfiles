@@ -13,6 +13,7 @@ nmap <leader>rr :source ~/.config/nvim/init.vim<CR>
 
 " Unfuck my screen
 nnoremap U :syntax sync fromstart<cr>:redraw!<cr>
+command! Bd bufdo bwipeout
 
 " " Copy to clipboard
 vnoremap  <leader>y  "+y

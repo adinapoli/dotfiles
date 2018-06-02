@@ -35,6 +35,8 @@ set envelope_from = yes
 set include                             #include message in replies
 set forward_quote                       #include message in forwards
 bind editor <tab>       complete
+bind pager a group-reply
+bind index a group-reply
 # always use SSL when connecting to a server
 set ssl_force_tls=yes
 set sort_alias= alias

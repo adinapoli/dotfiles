@@ -1,4 +1,5 @@
 let g:haskell_indent_disable = 1 "So that haskell-vim doesn't conflict with vim-haskell-indent
+let g:hindent_on_save = 0
 
 let g:LanguageClient_serverCommands = {
     \ 'haskell': ['hie', '--lsp'],

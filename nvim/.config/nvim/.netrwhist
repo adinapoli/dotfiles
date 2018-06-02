@@ -1,4 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/Users/adinapoli/dotfiles/nvim/.config/nvim/adinapoli-haskell'
 let g:netrw_dirhist_2='/Users/adinapoli/.config/nvim'
+let g:netrw_dirhist_3='/Users/adinapoli/dotfiles/nvim/.config/nvim/adinapoli-haskell'
+let g:netrw_dirhist_4='/Users/adinapoli/dotfiles/nvim/.config/nvim'
+let g:netrw_dirhist_5='/Users/adinapoli/work/clients/IOHK/cardano-sl/util/test/Test'
+let g:netrw_dirhist_6='/Users/adinapoli/.vim'
+let g:netrw_dirhist_7='/Users/adinapoli'
