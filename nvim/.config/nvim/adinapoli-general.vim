@@ -4,7 +4,10 @@ set termguicolors
 
 " Theme
 " colorscheme OceanicNext
-colorscheme challenger_deep
+" colorscheme challenger_deep
+" colorscheme gruvbox
+" set background=dark
+colorscheme gotham
 
 syntax on
 filetype plugin indent on

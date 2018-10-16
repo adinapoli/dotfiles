@@ -9,7 +9,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 unsetopt correct_all
-export EDITOR="vim"
+export EDITOR="nvim"
 bindkey -v
 bindkey '^P' history-incremental-search-backward
 bindkey '^S' history-incremental-search-forward
@@ -36,7 +36,3 @@ export PATH="$PATH:$HOME/.rvm/bin"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/adinapoli/.sdkman"
-[[ -s "/Users/adinapoli/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/adinapoli/.sdkman/bin/sdkman-init.sh"

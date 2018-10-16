@@ -4,28 +4,23 @@
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
-" Plugins goes here.
+" Colorschemes
 Plug 'mhartington/oceanic-next'
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': './install.sh'
-    \ }
-Plug 'https://github.com/neovimhaskell/haskell-vim.git'
-Plug 'https://github.com/itchyny/vim-haskell-indent.git'
+Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
+Plug 'morhetz/gruvbox'
+Plug 'whatyouhide/vim-gotham'
+
+" General-purpose plugins
 Plug 'git@github.com:jremmen/vim-ripgrep.git'
 Plug 'https://github.com/MarcWeber/vim-addon-local-vimrc.git'
 Plug 'https://github.com/ludovicchabant/vim-gutentags.git'
-Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
-Plug 'git-time-metric/gtm-vim-plugin'
-Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'udalov/kotlin-vim'
 
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-  let g:deoplete#enable_at_startup = 1
-else
-endif
+" Haskell
+Plug 'https://github.com/neovimhaskell/haskell-vim.git'
+Plug 'https://github.com/itchyny/vim-haskell-indent.git'
+Plug 'ndmitchell/ghcid', { 'rtp': 'plugins/nvim' }
 
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'

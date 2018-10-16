@@ -1,4 +1,3 @@
-
 alias e='ITERM_24BIT=1 /usr/local/Cellar/emacs/26.1/bin/emacs -nw'
 alias ec='emacsclient -a "" -nw'
 alias vi=nvim
