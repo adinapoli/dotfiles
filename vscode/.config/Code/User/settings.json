@@ -5,6 +5,9 @@
     "editor.minimap.enabled": false,
     "editor.mouseWheelZoom": true,
     "editor.renderWhitespace": "all",
+    "editor.fontFamily": "Iosevka Term",
+    "editor.fontSize": 18,
+    "editor.fontWeight": "300",
 
     "files.autoSave": "off",
 
@@ -14,11 +17,11 @@
     "window.titleBarStyle": "custom",
     "window.zoomLevel": 2,
     "workbench.activityBar.visible": false,
-    "workbench.colorTheme": "Default Dark+",
+    "workbench.colorTheme": "Cobalt2",
     "workbench.colorCustomizations": {
-        "statusBar.background": "#005f5f",
-        "statusBar.noFolderBackground": "#005f5f",
-        "statusBar.debuggingBackground": "#005f5f"
+      "statusBar.background": "#005f5f",
+      "statusBar.noFolderBackground": "#005f5f",
+      "statusBar.debuggingBackground": "#005f5f"
     },
     "vim.enableNeovim": false,
     "vim.leader": ",",
@@ -55,4 +58,16 @@
     "vim.statusBarColorControl": true,
     "vim.useSystemClipboard": true,
     "vim.debug.loggingLevel": "error",
+    "files.exclude": {
+      "**/*.dyn_hi": true,
+      "**/*.dyn_o": true,
+      "**/*.o": true
+    },
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "search.exclude": {
+      "**/*.dump-hi": true,
+      "**/*.dyn_hi": true,
+      "**/*.dyn_o": true,
+      "**/*.o": true
+    },
 }
