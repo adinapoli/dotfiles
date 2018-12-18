@@ -9,6 +9,8 @@
     "editor.fontSize": 18,
     "editor.fontWeight": "300",
 
+    "terminal.integrated.shell.osx": "zsh",
+
     "files.autoSave": "off",
 
     "haskell.hlint.run": "onSave",
@@ -70,4 +72,5 @@
       "**/*.dyn_o": true,
       "**/*.o": true
     },
+    "workbench.startupEditor": "newUntitledFile",
 }

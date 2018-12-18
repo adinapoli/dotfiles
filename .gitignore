@@ -13,3 +13,4 @@ emacs/.emacs.d/projectile-bookmarks.eld
 ghci/.ghc/ghci_history
 mutt/.mutt/temp/*
 tags
+nvim/.config/nvim/.netrwhist
