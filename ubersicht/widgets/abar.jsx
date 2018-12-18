@@ -2,7 +2,7 @@ import { css, styled } from "uebersicht"
 
 export const command = "./dist/abar"
 
-export const refreshFrequency = 2000 // ms
+export const refreshFrequency = 3000
 
 export const render = ({ output }) => {
     var abar = JSON.parse(output);
