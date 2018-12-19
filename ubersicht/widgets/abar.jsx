@@ -1,11 +1,23 @@
-import { css, styled } from "uebersicht"
+import { run, css, styled } from "uebersicht"
 
-export const command = "./dist/abar";
+export const initialState = { output: {} //abar output goes here.
+                            }
+
+export const command = (dispatch) =>
+    run("./dist/abar").then(
+        (output) => { dispatch({type: 'OUTPUT_UPDATED', data: JSON.parse(output) }) }
+    )
 
 export const refreshFrequency = 3000;
 
-export const render = ({ output }) => {
-    var abar = JSON.parse(output);
+export const updateState = (event, previousState) => {
+    switch(event.type) {
+        case 'OUTPUT_UPDATED': { return event.data; }
+        default: { return previousState }
+    }
+}
+
+export const render = ( abar ) => {
     return (
         <div className={stats}>
 
@@ -51,12 +63,21 @@ export const render = ({ output }) => {
     )
 }
 
+const changeDesktop = function (target) {
+  return console.log("changeDesktop to " + target);
+  // run("/usr/local/bin/chunkc tiling::desktop --focus " + target)
+}
+
 const missionControl = function (abar) {
     var mc = abar.mission_control
     var bar=[];
     for (var desktopId in mc[abar.current_monitor]) {
         var cls = pickDesktopClass(abar, desktopId);
-        bar.push(<span className={cls} key={desktopId}>{desktopId}&nbsp;</span>);
+        bar.push(<span onClick={() => {changeDesktop(desktopId)}} 
+                       className={cls} 
+                       key={desktopId}>{desktopId}&nbsp;
+                 </span>
+        );
     }
     return bar;
 }
@@ -89,14 +110,16 @@ const stats = css`
 `
 
 const desktop = css`
-    text-align: left;
+    text-align: center;
 `
 
 const nonEmptyDesktop = css`
-    font-weight: bold;
+    ${desktop};
+    font-style: italic;
 `
 
 const selectedDesktop = css`
+    ${desktop};
     color: yellow;
 `
 
