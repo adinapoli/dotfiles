@@ -175,24 +175,23 @@ set $darkgray #1d2021
 
 # blue gruvbox
 # class                 border|backgr|text|indicator|child_border
-client.focused          $blue $blue $darkgray $purple $darkgray
+client.focused          $blue $blue $darkgray $purple $yellow
 client.focused_inactive $darkgray $darkgray $yellow $purple $darkgray
 client.unfocused        $darkgray $darkgray $yellow $purple $darkgray
 client.urgent           $red $red $white $red $red
 
 # No borders
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 3
 
 # Gaps
-smart_borders on
 gaps inner 10
-gaps outer 10
-gaps horizontal 10
-gaps vertical 10
-gaps top 10
-gaps right 10
-gaps bottom 10
-gaps left 10
+gaps outer 5
+gaps horizontal 5
+gaps vertical 5
+gaps top 5
+gaps right 5
+gaps bottom 5
+gaps left 5
 
 # Post-hooks
 exec --no-startup-id nitrogen --restore

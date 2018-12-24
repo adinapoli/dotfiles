@@ -4,7 +4,8 @@ set termguicolors
 
 " Theme
 " colorscheme OceanicNext
-colorscheme challenger_deep
+" colorscheme challenger_deep
+colorscheme moonfly
 
 syntax on
 filetype plugin indent on

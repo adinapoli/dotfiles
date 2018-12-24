@@ -4,3 +4,5 @@ alias ec='emacsclient -a "" -nw'
 alias vi=nvim
 alias m=mutt
 alias nb=newsbeuter
+alias pbcopy='xsel --clipboard --input'
+alias pbpaste='xsel --clipboard --output'
