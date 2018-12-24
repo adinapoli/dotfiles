@@ -10,6 +10,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'mhartington/oceanic-next'
 Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'bluz71/vim-moonfly-colors'
+Plug 'Nequo/vim-allomancer'
 
 " For markdown
 Plug 'godlygeek/tabular'
@@ -24,8 +25,7 @@ Plug 'https://github.com/itchyny/vim-haskell-indent.git'
 
 Plug 'https://github.com/MarcWeber/vim-addon-local-vimrc.git'
 Plug 'ludovicchabant/vim-gutentags'
-Plug '/usr/local/opt/fzf'
-Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'udalov/kotlin-vim'
 Plug 'jremmen/vim-ripgrep'
 

@@ -7,6 +7,7 @@ let g:LanguageClient_serverCommands = {
 
 " HASKELL
 au BufEnter *.hsc set filetype=haskell
+au BufEnter *.lhs set filetype=haskell
 
 " ctags
 let g:gutentags_project_info = []
