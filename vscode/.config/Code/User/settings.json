@@ -1,5 +1,5 @@
 {
-    "editor.fontSize": 18,
+    "editor.fontSize": 16,
     "editor.formatOnPaste": true,
     "editor.insertSpaces": true,
     "editor.minimap.enabled": false,
@@ -17,7 +17,6 @@
     "haskell.hlint.executablePath": "/home/alfredo/.local/bin/hlint",
 
     "window.titleBarStyle": "custom",
-    "window.zoomLevel": 2,
     "workbench.activityBar.visible": false,
     "workbench.colorTheme": "Cobalt2",
     "workbench.colorCustomizations": {
@@ -73,4 +72,5 @@
       "**/*.o": true
     },
     "workbench.startupEditor": "newUntitledFile",
+    "window.zoomLevel": 1,
 }

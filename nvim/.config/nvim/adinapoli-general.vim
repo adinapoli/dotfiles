@@ -3,8 +3,8 @@
 set termguicolors
 
 " Theme
-" colorscheme OceanicNext
-colorscheme challenger_deep
+colorscheme paramount
+set background=dark
 
 syntax on
 filetype plugin indent on

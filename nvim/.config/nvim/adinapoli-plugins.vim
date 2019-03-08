@@ -6,21 +6,23 @@ call plug#begin('~/.vim/plugged')
 
 " Plugins goes here.
 Plug 'mhartington/oceanic-next'
-" Plug 'autozimu/LanguageClient-neovim', {
-"     \ 'branch': 'next',
-"     \ 'do': './install.sh'
-"     \ }
+Plug 'bluz71/vim-moonfly-colors'
+Plug 'ev-agelos/blaquemagick.vim'
+Plug 'robertmeta/nofrils'
+Plug 'owickstrom/vim-colors-paramount'
+Plug 'KKPMW/distilled-vim'
+
 Plug 'https://github.com/jamessan/vim-gnupg.git'
 Plug 'https://github.com/neovimhaskell/haskell-vim.git'
 Plug 'ndmitchell/ghcid', { 'rtp': 'plugins/nvim' }
-Plug 'https://github.com/itchyny/vim-haskell-indent.git'
+"Plug 'https://github.com/itchyny/vim-haskell-indent.git'
 Plug 'https://github.com/MarcWeber/vim-addon-local-vimrc.git'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'udalov/kotlin-vim'
-Plug 'jremmen/vim-ripgrep'
+Plug 'https://github.com/jremmen/vim-ripgrep.git'
 
 " if has('nvim')
 "   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
