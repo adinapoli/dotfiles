@@ -14,3 +14,5 @@ let g:gutentags_project_info = []
 call add(g:gutentags_project_info, {'type': 'haskell', 'glob': '*.cabal', 'file': 'stack.yaml'})
 let g:gutentags_ctags_executable_haskell = '~/.config/nvim/adinapoli-haskell/gen-tags'
 let g:gutentags_generate_on_write = 1
+" Set the line below to 1 in case the ctagging process fails.
+let g:gutentags_trace = 0

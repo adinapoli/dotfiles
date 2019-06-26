@@ -3,7 +3,8 @@
 set termguicolors
 
 " Theme
-colorscheme paramount
+"colorscheme paramount
+colorscheme spacecamp
 set background=dark
 
 syntax on

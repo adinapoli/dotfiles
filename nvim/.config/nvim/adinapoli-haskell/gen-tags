@@ -9,4 +9,6 @@ fi
 
 hs_files=$(find $tags_root -not -path '*/\.*' -not -path 'dist' -iname '*.hs' -o -iname '*.hsc' | tr "\n" " ")
 
-fast-tags -o ${tags_root}/tags --no-module-tags --nomerge $hs_files
+OUTDIR=${2:tags}
+
+fast-tags -o ${tags_root}/$OUTDIR --no-module-tags --nomerge $hs_files

@@ -16,6 +16,7 @@ Plug 'KKPMW/distilled-vim'
 Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'bluz71/vim-moonfly-colors'
 Plug 'Nequo/vim-allomancer'
+Plug 'jaredgorski/SpaceCamp'
 
 " For markdown
 Plug 'godlygeek/tabular'
@@ -30,6 +31,7 @@ Plug 'ndmitchell/ghcid', { 'rtp': 'plugins/nvim' }
 Plug 'https://github.com/MarcWeber/vim-addon-local-vimrc.git'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'udalov/kotlin-vim'
 Plug 'https://github.com/jremmen/vim-ripgrep.git'
 
