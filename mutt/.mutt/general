@@ -13,7 +13,7 @@ set status_chars  = " *%A"
 # General
 
 # ------------------------------------------------------------------------------
-alternates "(averagehaskeller@gmail\.com)|(alfredo.dinapoli@gmail\.com)"
+alternates "(averagehaskeller@gmail\.com)|(alfredo.dinapoli@gmail\.com)|(alfredo@monadic\.xyz)"
 set realname = "Alfredo Di Napoli"
 set edit_headers          = yes #you can add cc, bcc, or change ur from input
 set reverse_name          # one pre-fills the From address when replying based on the account that received the original mail

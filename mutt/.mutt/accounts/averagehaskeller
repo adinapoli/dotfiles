@@ -1,11 +1,12 @@
 set from      = "averagehaskeller@gmail.com"
 set mbox      = "+averagehaskeller/inbox"
 set postponed = "+averagehaskeller/drafts"
+set record    = "+averagehaskeller/sent_mail"
 set trash     = "+averagehaskeller/trash"
 set status_format = "───[ Folder: %f ]───[%r%m AVERAGE messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
 set sendmail = "/usr/local/bin/msmtp -a average"
 set sendmail_wait = 0
-unset record
+# unset record
 
 set index_format = "%4C %Z %{%b %d %H:%M} %-25.25L (%?l?%4l&%4c?) %s"
 
@@ -14,7 +15,7 @@ color indicator brightwhite green # indicator for the "current message"
 
 unmailboxes *
 mailboxes +averagehaskeller/inbox \
-+averagehaskeller/sent \
++averagehaskeller/sent_mail \
 +averagehaskeller/drafts \
 +averagehaskeller/junk \
 +averagehaskeller/trash

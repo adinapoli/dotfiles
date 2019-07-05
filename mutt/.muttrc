@@ -8,9 +8,9 @@ source ~/.mutt/vim-keys.rc
 # ------------------------------------------------------------------------------
 folder-hook +averagehaskeller/* source ~/.mutt/accounts/averagehaskeller
 folder-hook +personal/* source ~/.mutt/accounts/personal
-folder-hook +iris/* source ~/.mutt/accounts/iris
+folder-hook +monadic/* source ~/.mutt/accounts/monadic
 
 # Cycle through mailboxes
 folder-hook +averagehaskeller/* 'macro index \Cn "c+personal/INBOX\n" "Next Mailbox"'
-folder-hook +personal/* 'macro index \Cn "c+iris/INBOX\n" "Next Mailbox"'
-folder-hook +iris/* 'macro index \Cn "c+averagehaskeller/INBOX\n" "Next Mailbox"'
+folder-hook +personal/* 'macro index \Cn "c+monadic/INBOX\n" "Next Mailbox"'
+folder-hook +monadic/* 'macro index \Cn "c+averagehaskeller/INBOX\n" "Next Mailbox"'

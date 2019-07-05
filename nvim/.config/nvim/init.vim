@@ -7,6 +7,7 @@ source ~/.config/nvim/adinapoli-general.vim
 source ~/.config/nvim/adinapoli-navigation.vim
 source ~/.config/nvim/adinapoli-programming-languages.vim
 source ~/.config/nvim/adinapoli-haskell.vim
+source ~/.config/nvim/adinapoli-rust.vim
 source ~/.config/nvim/adinapoli-find-in-projects.vim
 source ~/.config/nvim/adinapoli-ruby.vim
 

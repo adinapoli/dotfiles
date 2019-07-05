@@ -1,0 +1,41 @@
+set from      = "alfredo@monadic.xyz"
+set realname  = "Alfredo Di Napoli"
+set mbox      = "+monadic/inbox"
+set postponed = "+monadic/drafts"
+set record    = "+monadic/sent_mail"
+set status_format = "───[ Folder: %f ]───[%r%m Monadic messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
+set sendmail = "/usr/local/bin/msmtp -a monadic"
+set sendmail_wait = 0
+unset record
+unset alias_file
+
+set index_format = "%4C %Z %{%b %d %H:%M} %-25.25L (%?l?%4l&%4c?) %s"
+
+set alias_file=/Users/adinapoli/Dropbox/dotfiles/.mutt/aliases/monadic
+source $alias_file
+
+folder-hook +monadic/code-reviews unset signature set editor=vim set content_type=text/plain
+
+color status magenta default
+color indicator brightwhite magenta # indicator for the "current message"
+
+#For the signature to work (We don't need one for monadic)
+# set editor = "~/.mutt/html_editor"
+# set content_type=text/html
+# unset signature
+# set signature = /Users/adinapoli/Dropbox/dotfiles/.mutt/signatures/monadic.html
+
+unmailboxes *
+mailboxes +monadic/inbox \
++monadic/jobs \
++monadic/to-read \
++monadic/code-reviews \
++monadic/docs \
++monadic/sent_mail \
++monadic/drafts \
++monadic/junk \
++monadic/trash \
++temporary/search
+
+# account-specific keybindings
+macro pager,index dd ":set confirmappend=no\n<save-message>+monadic/trash<enter>" "move message to the trash"

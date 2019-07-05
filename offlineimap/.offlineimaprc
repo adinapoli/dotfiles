@@ -1,6 +1,6 @@
 [general]
 metadata = ~/.offlineimap
-accounts = AverageHaskeller, Personal, IRIS
+accounts = AverageHaskeller, Personal, Monadic
 maxsyncaccounts = 10
 ui = ttyui
 ignore-readonly = no
@@ -106,28 +106,28 @@ sync_deletes = yes
 
 # ------------------------------------------------------------------------------
 #
-# IRIS Connect
+# Monadic
 #
 # ------------------------------------------------------------------------------
 
-[Account IRIS]
+[Account Monadic]
 postsynchook = notmuch new
-localrepository = LocalIRIS
-remoterepository = RemoteIRIS
+localrepository = LocalMonadic
+remoterepository = RemoteMonadic
 autorefresh = 5
 maxage = 2017-01-01
 synclabels = yes
 ignorelabels = \Inbox, \Starred, \Sent, \Draft, \Spam, \Trash, \Important
 
-[Repository LocalIRIS]
+[Repository LocalMonadic]
 type = GmailMaildir
-localfolders = ~/mail/iris
+localfolders = ~/mail/monadic
 sep = /
 sync_deletes = no
 
-[Repository RemoteIRIS]
+[Repository RemoteMonadic]
 type = Gmail
-remotepasseval = get_remote_application_password("iris")
+remotepasseval = get_remote_application_password("monadic")
 remotehost = imap.gmail.com
 starttls = no
 ssl = yes
@@ -135,7 +135,7 @@ sslcacertfile=/usr/local/etc/openssl/cert.pem
 ssl_version = tls1_2
 tls_level = tls_secure
 remoteport = 993
-remoteuser = alfredo@irisconnect.co.uk
+remoteuser = alfredo@monadic.xyz
 idlefolders = ['INBOX']
 usecompression = no
 maxconnections = 1
