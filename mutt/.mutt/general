@@ -15,6 +15,7 @@ set status_chars  = " *%A"
 # ------------------------------------------------------------------------------
 alternates "(averagehaskeller@gmail\.com)|(alfredo.dinapoli@gmail\.com)|(alfredo@monadic\.xyz)"
 set realname = "Alfredo Di Napoli"
+set editor                = nvim
 set edit_headers          = yes #you can add cc, bcc, or change ur from input
 set reverse_name          # one pre-fills the From address when replying based on the account that received the original mail
 set imap_check_subscribed = yes # automatically poll subscribed mailboxes for new mail
