@@ -12,4 +12,4 @@ set signature        = ~/.mutt/sig           # my signature file
 
 # Set the default email
 # ------------------------------------------------------------------------------
-set spoolfile=+averagehaskeller/INBOX
+set spoolfile=+monadic/INBOX

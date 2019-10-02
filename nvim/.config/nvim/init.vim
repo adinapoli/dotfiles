@@ -10,6 +10,7 @@ source ~/.config/nvim/adinapoli-haskell.vim
 source ~/.config/nvim/adinapoli-rust.vim
 source ~/.config/nvim/adinapoli-find-in-projects.vim
 source ~/.config/nvim/adinapoli-ruby.vim
+source ~/.config/nvim/adinapoli-latex.vim
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start

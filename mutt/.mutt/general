@@ -13,7 +13,7 @@ set status_chars  = " *%A"
 # General
 
 # ------------------------------------------------------------------------------
-alternates "(averagehaskeller@gmail\.com)|(alfredo.dinapoli@gmail\.com)|(alfredo@monadic\.xyz)"
+alternates "(alfredo@monadic\.xyz)|(averagehaskeller@gmail\.com)|(alfredo.dinapoli@gmail\.com)"
 set realname = "Alfredo Di Napoli"
 set editor                = nvim
 set edit_headers          = yes #you can add cc, bcc, or change ur from input

@@ -22,6 +22,9 @@ Plug 'jaredgorski/SpaceCamp'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 
+" Latex
+Plug 'lervag/vimtex'
+
 Plug 'https://github.com/jamessan/vim-gnupg.git'
 
 " Rust
