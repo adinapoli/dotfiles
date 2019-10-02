@@ -24,6 +24,11 @@ Plug 'plasticboy/vim-markdown'
 
 Plug 'https://github.com/jamessan/vim-gnupg.git'
 
+"Rust
+Plug 'rust-lang/rust.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+let g:rustfmt_autosave = 1
+
 " Haskell
 Plug 'https://github.com/neovimhaskell/haskell-vim.git'
 Plug 'ndmitchell/ghcid', { 'rtp': 'plugins/nvim' }
