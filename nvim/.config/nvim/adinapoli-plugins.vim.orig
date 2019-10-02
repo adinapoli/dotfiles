@@ -27,10 +27,16 @@ Plug 'lervag/vimtex'
 
 Plug 'https://github.com/jamessan/vim-gnupg.git'
 
+<<<<<<< HEAD
 " Rust
 Plug 'rust-lang/rust.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+=======
+"Rust
+Plug 'rust-lang/rust.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 let g:rustfmt_autosave = 1
+>>>>>>> 2019-linux
 
 " Haskell
 Plug 'https://github.com/neovimhaskell/haskell-vim.git'

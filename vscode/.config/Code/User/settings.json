@@ -18,7 +18,7 @@
 
     "window.titleBarStyle": "custom",
     "workbench.activityBar.visible": false,
-    "workbench.colorTheme": "Cobalt2",
+    "workbench.colorTheme": "Night Owl",
     "workbench.colorCustomizations": {
       "statusBar.background": "#005f5f",
       "statusBar.noFolderBackground": "#005f5f",
