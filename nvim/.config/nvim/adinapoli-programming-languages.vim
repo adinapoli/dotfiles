@@ -1,8 +1,7 @@
-
 au BufEnter *.md set filetype=markdown
 
 "Right Column margin indicator
-:set cc=80
+:set cc=110
 
 "No beeping and visual bell
 set noeb vb t_vb=
@@ -47,3 +46,4 @@ set softtabstop=2
 set expandtab
 set listchars=tab:▸\ ,eol:¬,trail:·
 
+let g:gutentags_exclude_filetypes = ['gitcommit', 'gitconfig', 'gitrebase', 'gitsendemail', 'git']

@@ -23,7 +23,7 @@ chunkc set global_desktop_mode           bsp
 # chunkc set 5_desktop_mode                float
 
 chunkc set global_desktop_offset_top     5
-chunkc set global_desktop_offset_bottom  30
+chunkc set global_desktop_offset_bottom  35
 chunkc set global_desktop_offset_left    5
 chunkc set global_desktop_offset_right   5
 chunkc set global_desktop_offset_gap     5 

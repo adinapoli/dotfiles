@@ -14,13 +14,20 @@ Plug 'robertmeta/nofrils'
 Plug 'owickstrom/vim-colors-paramount'
 Plug 'KKPMW/distilled-vim'
 Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
-Plug 'bluz71/vim-moonfly-colors'
 Plug 'Nequo/vim-allomancer'
 Plug 'jaredgorski/SpaceCamp'
+Plug 'cloudhead/shady.vim'
+Plug 'fcpg/vim-orbital'
+Plug 'drewtempelmeyer/palenight.vim'
+Plug 'rhysd/vim-color-spring-night'
+Plug 'yassinebridi/vim-purpura'
+Plug 'habamax/vim-polar'
+Plug 'habamax/vim-habanight'
 
 " For markdown
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
+Plug 'junegunn/vim-easy-align'
 
 " Latex
 Plug 'lervag/vimtex'
@@ -32,6 +39,11 @@ Plug 'rust-lang/rust.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 let g:rustfmt_autosave = 1
 
+" General utils
+Plug 'https://github.com/chrisbra/NrrwRgn.git'
+Plug 'https://github.com/markstory/vim-zoomwin.git'
+Plug 'ntpeters/vim-better-whitespace'
+
 " Haskell
 Plug 'https://github.com/neovimhaskell/haskell-vim.git'
 Plug 'ndmitchell/ghcid', { 'rtp': 'plugins/nvim' }
@@ -42,6 +54,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'udalov/kotlin-vim'
 Plug 'https://github.com/jremmen/vim-ripgrep.git'
+Plug 'mpickering/hlint-refactor-vim'
 
 " if has('nvim')
 "   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -49,6 +62,8 @@ Plug 'https://github.com/jremmen/vim-ripgrep.git'
 " else
 " endif
 
+
+let g:python3_host_prog='/usr/local/Cellar/python/3.7.7/bin/python3'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 let g:UltiSnipsExpandTrigger="<tab>"

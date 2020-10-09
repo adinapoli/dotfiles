@@ -73,4 +73,7 @@
     },
     "workbench.startupEditor": "newUntitledFile",
     "window.zoomLevel": 1,
+    "terminal.integrated.env.osx": {
+     "CURRENT_GHC_VERSION": "8.10.1"
+    },
 }

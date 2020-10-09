@@ -4,8 +4,12 @@ set termguicolors
 
 " Theme
 "colorscheme paramount
-colorscheme spacecamp
+"colorscheme spacecamp
+"colorscheme challenger_deep
 set background=dark
+"colorscheme palenight
+"colorscheme purpura
+colorscheme habanight
 
 syntax on
 filetype plugin indent on
@@ -22,7 +26,7 @@ set nobackup
 " set a directory to store the undo history
 set undodir=~/.nvim/undo/
 
-set undolevels=1000 
+set undolevels=1000
 set undoreload=10000
 
 " Always show the statusline
@@ -49,12 +53,13 @@ set statusline+=%1*\ %<%F\                                "File+path
 set statusline+=%2*\ %y\                                  "FileType
 set statusline+=%3*\ %{''.(&fenc!=''?&fenc:&enc).''}      "Encoding
 set statusline+=%3*\ %{(&bomb?\",BOM\":\"\")}\            "Encoding2
-set statusline+=%4*\ %{&ff}\                              "FileFormat (dos/unix..) 
+set statusline+=%4*\ %{&ff}\                              "FileFormat (dos/unix..)
 set statusline+=%7*\ %=\ row:%l/%L\             "Rownumber/total (%)
 set statusline+=%8*\ col:%03c\                            "Colnr
 set statusline+=%9*\ \ %m%r%w\ %P\ \                      "Modified? Readonly? Top/bot.
 set statusline+=%9*\ %{strftime('🕐\ %d/%m/%y\ %I:%M')}
 
+let g:local_vimrc = {'names':['.vimrc','.vim/.vimrc'],'hash_fun':'LVRHashOfFile'}
 
 " https://superuser.com/questions/815416/hitting-enter-in-the-quickfix-window-doesnt-work
 " In the quickfix window, <CR> is used to jump to the error under the
