@@ -1,0 +1,21 @@
+
+# Dear old jj to remap Esc
+hook global InsertChar j %{ try %{
+  exec -draft hH <a-k>jj<ret> d
+  exec <esc>
+}}
+
+# Load plug.kak and other stuff
+source "%val{config}/plugins/plug.kak/rc/plug.kak"
+
+# Language Server Protocol plugin
+plug "kak-lsp/kak-lsp"
+
+# List buffers and switch between them
+plug "Delapouite/kakoune-buffers"
+
+# Highlighters
+
+add-highlighter global/number-lines number-lines
+add-highlighter global/show-matching show-matching
+add-highlighter global/show-whitespaces show-whitespaces
