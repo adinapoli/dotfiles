@@ -197,3 +197,5 @@ gaps left 5
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id xmodmap ~/.xmodmap
 
+floating_minimum_size 1024 x 768
+floating_maximum_size 1024 x 768

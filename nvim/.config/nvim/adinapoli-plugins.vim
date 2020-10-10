@@ -23,6 +23,8 @@ Plug 'rhysd/vim-color-spring-night'
 Plug 'yassinebridi/vim-purpura'
 Plug 'habamax/vim-polar'
 Plug 'habamax/vim-habanight'
+Plug 'drewtempelmeyer/palenight.vim'
+Plug 'hauleth/blame.vim'
 
 " For markdown
 Plug 'godlygeek/tabular'
