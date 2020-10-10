@@ -19,3 +19,8 @@ plug "Delapouite/kakoune-buffers"
 add-highlighter global/number-lines number-lines
 add-highlighter global/show-matching show-matching
 add-highlighter global/show-whitespaces show-whitespaces
+
+#UI
+set-option -add global ui_options ncurses_status_on_top=yes
+set-option -add global ui_options ncurses_assistant=cat
+set-option -add global ui_options ncurses_set_title=no
