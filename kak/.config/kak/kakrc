@@ -18,4 +18,4 @@ plug "Delapouite/kakoune-buffers"
 
 add-highlighter global/number-lines number-lines
 add-highlighter global/show-matching show-matching
-add-highlighter global/show-whitespaces show-whitespaces
+#add-highlighter global/show-whitespaces show-whitespaces
