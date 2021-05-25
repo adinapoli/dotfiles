@@ -25,6 +25,11 @@ Plug 'habamax/vim-polar'
 Plug 'habamax/vim-habanight'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'hauleth/blame.vim'
+Plug 'aloussase/cyberpunk'
+Plug 'Zabanaa/neuromancer.vim'
+Plug 'TroyFletcher/vim-colors-synthwave'
+Plug 'humanoid-colors/vim-humanoid-colorscheme', { 'branch': 'main' }
+Plug 'bignimbus/pop-punk.vim'
 
 " For markdown
 Plug 'godlygeek/tabular'
@@ -57,6 +62,9 @@ Plug 'junegunn/fzf.vim'
 Plug 'udalov/kotlin-vim'
 Plug 'https://github.com/jremmen/vim-ripgrep.git'
 Plug 'mpickering/hlint-refactor-vim'
+
+" PureScript
+Plug 'purescript-contrib/purescript-vim'
 
 " if has('nvim')
 "   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }

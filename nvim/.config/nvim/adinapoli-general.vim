@@ -6,10 +6,13 @@ set termguicolors
 "colorscheme paramount
 "colorscheme spacecamp
 "colorscheme challenger_deep
-set background=dark
+"set background=dark
 "colorscheme palenight
 "colorscheme purpura
-colorscheme habanight
+"colorscheme habanight
+"colorscheme humanoid
+colorscheme pop-punk
+let g:terminal_ansi_colors = pop_punk#AnsiColors()
 
 syntax on
 filetype plugin indent on

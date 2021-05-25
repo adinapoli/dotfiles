@@ -32,6 +32,7 @@ nmap <silent> <C-n> <Plug>(coc-diagnostic-next)
 noremap <leader>d :call ToggleCocListDiagnostics()<CR>
 nmap <silent> <leader>a <Plug>(coc-codeaction)
 nmap <silent> <leader>l <Plug>(coc-codeaction-line)
+nmap <leader>ca <Plug>(coc-codelens-action)
 
 let s:adinapoliDiagnosticsListOpen=0
 

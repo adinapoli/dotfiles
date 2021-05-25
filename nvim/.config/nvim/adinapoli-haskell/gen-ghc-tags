@@ -1,0 +1,14 @@
+#!/bin/bash
+
+tags_root=$(git rev-parse --show-toplevel)
+
+if [[ -z $tags_root ]]; then
+    tags_root=$(pwd)
+    echo "Can't find git root, using ${tags_root} as tag root"
+fi
+
+hs_files=$(rg --color never --files --type haskell | grep -v "hadrian" | grep -v "libraries" | grep -v "testsuite" | grep -v "nofib" | tr "\n" " ")
+
+OUTDIR=${2:tags}
+
+fast-tags -o ${tags_root}/$OUTDIR --no-module-tags --nomerge $hs_files

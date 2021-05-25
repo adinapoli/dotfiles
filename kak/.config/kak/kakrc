@@ -14,6 +14,13 @@ plug "kak-lsp/kak-lsp"
 # List buffers and switch between them
 plug "Delapouite/kakoune-buffers"
 
+plug DERPSQUID9/kakoune-cyberpunk-neon theme config %{
+    colorscheme cyberpunk-neon
+}
+
+# Enable the "80 characters" reminder
+add-highlighter global/ column 81 default,red
+
 # Highlighters
 
 add-highlighter global/number-lines number-lines
