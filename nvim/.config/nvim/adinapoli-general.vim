@@ -11,8 +11,11 @@ set termguicolors
 "colorscheme purpura
 "colorscheme habanight
 "colorscheme humanoid
-colorscheme pop-punk
+"colorscheme pop-punk
+colorscheme iceberg
 let g:terminal_ansi_colors = pop_punk#AnsiColors()
+
+let g:python3_host_prog = "/Users/adinapoli/.pyenv/shims/python3"
 
 syntax on
 filetype plugin indent on

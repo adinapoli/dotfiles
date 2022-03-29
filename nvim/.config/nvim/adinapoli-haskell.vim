@@ -15,6 +15,16 @@ let g:LanguageClient_serverCommands = {
 au BufEnter *.hsc set filetype=haskell
 au BufEnter *.lhs set filetype=haskell
 
+augroup hamlet_ft
+  au!
+  autocmd BufNewFile,BufRead,BufEnter *.hamlet set filetype=html
+augroup END
+
+augroup julius_ft
+  au!
+  autocmd BufNewFile,BufRead,BufEnter *.julius set filetype=javascript
+augroup END
+
 " ctags
 let g:gutentags_project_info = []
 call add(g:gutentags_project_info, {'type': 'haskell', 'glob': '*.cabal', 'file': 'stack.yaml'})

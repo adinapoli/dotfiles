@@ -2,6 +2,7 @@
   "dependencies": {
     "coc-rls": ">=1.1.6",
     "coc-tsserver": ">=1.5.7",
-    "coc-ultisnips": ">=1.2.3"
+    "coc-ultisnips": ">=1.2.3",
+    "coc-vimtex": ">=1.0.4"
   }
 }

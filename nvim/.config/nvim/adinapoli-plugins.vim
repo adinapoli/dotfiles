@@ -25,11 +25,11 @@ Plug 'habamax/vim-polar'
 Plug 'habamax/vim-habanight'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'hauleth/blame.vim'
-Plug 'aloussase/cyberpunk'
 Plug 'Zabanaa/neuromancer.vim'
 Plug 'TroyFletcher/vim-colors-synthwave'
 Plug 'humanoid-colors/vim-humanoid-colorscheme', { 'branch': 'main' }
 Plug 'bignimbus/pop-punk.vim'
+Plug 'cocopon/iceberg.vim'
 
 " For markdown
 Plug 'godlygeek/tabular'
