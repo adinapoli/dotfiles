@@ -1,13 +1,13 @@
 
 " A dirty trick for preventing me to use arrow keys
-inoremap <Up>      <NOP>
-inoremap <Down>    <NOP>
-inoremap <Left>    <NOP>
-inoremap <Right>   <NOP>
-noremap <Up>       <NOP>
-noremap <Down>     <NOP>
-noremap <Left>     <NOP>
-noremap <Right>    <NOP>
+"inoremap <Up>      <NOP>
+"inoremap <Down>    <NOP>
+"inoremap <Left>    <NOP>
+"inoremap <Right>   <NOP>
+"noremap <Up>       <NOP>
+"noremap <Down>     <NOP>
+"noremap <Left>     <NOP>
+"noremap <Right>    <NOP>
 
 " NAVIGATION
 " Move around splits with <c-hjkl>

@@ -30,6 +30,11 @@ Plug 'TroyFletcher/vim-colors-synthwave'
 Plug 'humanoid-colors/vim-humanoid-colorscheme', { 'branch': 'main' }
 Plug 'bignimbus/pop-punk.vim'
 Plug 'cocopon/iceberg.vim'
+Plug 'EdenEast/nightfox.nvim'
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+Plug 'wadackel/vim-dogrun'
+Plug 'nikolvs/vim-sunbather'
+Plug 'matsuuu/pinkmare'
 
 " For markdown
 Plug 'godlygeek/tabular'
@@ -43,13 +48,19 @@ Plug 'https://github.com/jamessan/vim-gnupg.git'
 
 " Rust
 Plug 'rust-lang/rust.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 let g:rustfmt_autosave = 1
 
 " General utils
 Plug 'https://github.com/chrisbra/NrrwRgn.git'
 Plug 'https://github.com/markstory/vim-zoomwin.git'
 Plug 'ntpeters/vim-better-whitespace'
+Plug 'https://github.com/tpope/vim-surround.git'
+Plug 'https://github.com/folke/trouble.nvim.git'
+Plug 'nvim-lualine/lualine.nvim'
+"Plug 'nvim-tree/nvim-web-devicons'
+Plug 'ryanoasis/vim-devicons'
+Plug 'akinsho/bufferline.nvim', { 'tag': 'v4.6.1' }
 
 " Haskell
 Plug 'https://github.com/neovimhaskell/haskell-vim.git'
@@ -59,12 +70,24 @@ Plug 'https://github.com/MarcWeber/vim-addon-local-vimrc.git'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'ibhagwan/fzf-lua', {'branch': 'main'}
 Plug 'udalov/kotlin-vim'
 Plug 'https://github.com/jremmen/vim-ripgrep.git'
 Plug 'mpickering/hlint-refactor-vim'
+Plug 'sdiehl/vim-ormolu'
+Plug 'https://github.com/mrcjkb/haskell-tools.nvim.git'
 
 " PureScript
 Plug 'purescript-contrib/purescript-vim'
+
+" Zig language
+Plug 'ziglang/zig.vim'
+
+" LSP native support
+Plug 'https://github.com/neovim/nvim-lspconfig.git'
+
+" Gleam language
+Plug 'https://github.com/gleam-lang/gleam.vim.git'
 
 " if has('nvim')
 "   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -73,9 +96,9 @@ Plug 'purescript-contrib/purescript-vim'
 " endif
 
 
-let g:python3_host_prog='/usr/local/Cellar/python/3.7.7/bin/python3'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
+let g:python3_host_prog='python3'
+"Plug 'SirVer/ultisnips'
+"Plug 'honza/vim-snippets'
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"

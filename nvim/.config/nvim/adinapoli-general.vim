@@ -12,10 +12,14 @@ set termguicolors
 "colorscheme habanight
 "colorscheme humanoid
 "colorscheme pop-punk
-colorscheme iceberg
+"colorscheme iceberg
+"colorscheme moonshine_lowcontrast
+"colorscheme moonfly
+"colorscheme terafox
+colorscheme nightfox
 let g:terminal_ansi_colors = pop_punk#AnsiColors()
 
-let g:python3_host_prog = "/Users/adinapoli/.pyenv/shims/python3"
+let g:python3_host_prog = "python3"
 
 syntax on
 filetype plugin indent on
@@ -65,7 +69,7 @@ set statusline+=%8*\ col:%03c\                            "Colnr
 set statusline+=%9*\ \ %m%r%w\ %P\ \                      "Modified? Readonly? Top/bot.
 set statusline+=%9*\ %{strftime('🕐\ %d/%m/%y\ %I:%M')}
 
-let g:local_vimrc = {'names':['.vimrc','.vim/.vimrc'],'hash_fun':'LVRHashOfFile'}
+let g:local_vimrc = {'names':['.vimrc','.vim/.vimrc', '.vim/.vimrc.lua'],'hash_fun':'LVRHashOfFile'}
 
 " https://superuser.com/questions/815416/hitting-enter-in-the-quickfix-window-doesnt-work
 " In the quickfix window, <CR> is used to jump to the error under the

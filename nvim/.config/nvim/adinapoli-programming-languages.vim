@@ -1,4 +1,4 @@
-au BufEnter *.md set filetype=markdown
+
 
 "Right Column margin indicator
 :set cc=110
@@ -47,3 +47,4 @@ set expandtab
 set listchars=tab:▸\ ,eol:¬,trail:·
 
 let g:gutentags_exclude_filetypes = ['gitcommit', 'gitconfig', 'gitrebase', 'gitsendemail', 'git']
+let g:gutentags_ctags_executable_haskell = "/Users/adinapoli/.config/nvim/adinapoli-haskell/gen-tags"

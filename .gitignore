@@ -17,3 +17,4 @@ nvim/.config/nvim/.netrwhist
 vscode/.config/Code/User/globalStorage/state.vscdb*
 ubersicht/Library/
 ubersicht/.DS_Store
+coc/.config/coc/extensions/node_modules

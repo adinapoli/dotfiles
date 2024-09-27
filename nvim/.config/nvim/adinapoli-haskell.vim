@@ -7,9 +7,9 @@ let g:hindent_on_save = 0
 let g:haskell_indent_in = 0
 let g:haskell_indent_disable = 1
 
-let g:LanguageClient_serverCommands = {
-    \ 'haskell': ['hie', '--lsp'],
-    \ }
+"let g:LanguageClient_serverCommands = {
+"    \ 'haskell': ['hie', '--lsp'],
+"    \ }
 
 " HASKELL
 au BufEnter *.hsc set filetype=haskell
@@ -37,10 +37,12 @@ let g:gutentags_trace = 0
 let g:hlintRefactor#disableDefaultKeybindings = 1
 
 " Allow C-n to bring you to the next COC error.
-nmap <silent> <C-n> <Plug>(coc-diagnostic-next)
+nmap <silent> <C-n> <cmd>lua vim.diagnostic.goto_prev()<CR>
+"<Plug>(coc-diagnostic-next)
 
 noremap <leader>d :call ToggleCocListDiagnostics()<CR>
 nmap <silent> <leader>a <Plug>(coc-codeaction)
+nmap <silent> <leader>a <cmd>lua vim.lsp.buf.code_action()<CR>
 nmap <silent> <leader>l <Plug>(coc-codeaction-line)
 nmap <leader>ca <Plug>(coc-codelens-action)
 
