@@ -61,6 +61,10 @@ Plug 'nvim-lualine/lualine.nvim'
 "Plug 'nvim-tree/nvim-web-devicons'
 Plug 'ryanoasis/vim-devicons'
 Plug 'akinsho/bufferline.nvim', { 'tag': 'v4.6.1' }
+Plug 'https://github.com/dkprice/vim-easygrep.git'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release' }
+Plug 'nvim-lua/plenary.nvim'
 
 " Haskell
 Plug 'https://github.com/neovimhaskell/haskell-vim.git'

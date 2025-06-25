@@ -16,7 +16,8 @@ set termguicolors
 "colorscheme moonshine_lowcontrast
 "colorscheme moonfly
 "colorscheme terafox
-colorscheme nightfox
+"colorscheme nightfox
+colorscheme pinkmare
 let g:terminal_ansi_colors = pop_punk#AnsiColors()
 
 let g:python3_host_prog = "python3"
