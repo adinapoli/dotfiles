@@ -32,3 +32,5 @@ nnoremap <silent> <c-t> :tabnew<CR>
 "Shows cmd pressed in normal mode
 set showcmd
 
+" Source this later, so that it can override some commands.
+source ~/.config/nvim/adinapoli-vscode.vim

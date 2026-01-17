@@ -9,7 +9,6 @@ call plug#begin('~/.vim/plugged')
 " Colorschemes
 Plug 'mhartington/oceanic-next'
 Plug 'bluz71/vim-moonfly-colors'
-Plug 'ev-agelos/blaquemagick.vim'
 Plug 'robertmeta/nofrils'
 Plug 'owickstrom/vim-colors-paramount'
 Plug 'KKPMW/distilled-vim'
@@ -35,6 +34,10 @@ Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'wadackel/vim-dogrun'
 Plug 'nikolvs/vim-sunbather'
 Plug 'matsuuu/pinkmare'
+Plug '/Users/adinapoli/programming/lua/workspace-diagnostics.nvim'
+Plug 'rose-pine/neovim'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'cmoscofian/nibble-vim'
 
 " For markdown
 Plug 'godlygeek/tabular'
@@ -65,6 +68,8 @@ Plug 'https://github.com/dkprice/vim-easygrep.git'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release' }
 Plug 'nvim-lua/plenary.nvim'
+Plug 'https://github.com/tpope/vim-abolish.git'
+Plug 'rcarriga/nvim-notify'
 
 " Haskell
 Plug 'https://github.com/neovimhaskell/haskell-vim.git'

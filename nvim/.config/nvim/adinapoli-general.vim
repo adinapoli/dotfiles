@@ -18,6 +18,7 @@ set termguicolors
 "colorscheme terafox
 "colorscheme nightfox
 colorscheme pinkmare
+"colorscheme cyberpunk-neon
 let g:terminal_ansi_colors = pop_punk#AnsiColors()
 
 let g:python3_host_prog = "python3"
