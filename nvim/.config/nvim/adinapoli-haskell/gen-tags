@@ -10,7 +10,19 @@ if [[ -z $tags_root ]]; then
 fi
 
 #hs_files=$(find $tags_root -not -path '*/\.*' -not -path 'dist-newstyle' -not -path 'dist' -iname '*.hs' -o -iname '*.hsc' | tr "\n" " ")
-hs_files=$(rg $tags_root --files --type haskell)
+
+# Exclude other git worktrees nested under tags_root so tags don't leak
+# across branches when worktrees live inside the main checkout.
+excludes=()
+while IFS= read -r wt; do
+    [[ -z $wt ]] && continue
+    [[ $wt == "$tags_root" ]] && continue
+    if [[ $wt == "$tags_root"/* ]]; then
+        excludes+=( --glob "!${wt#$tags_root/}/**" )
+    fi
+done < <(git worktree list --porcelain 2>/dev/null | awk '/^worktree /{print $2}')
+
+hs_files=$(rg "$tags_root" --files --type haskell "${excludes[@]}")
 
 OUTDIR=${2:-tags}
 

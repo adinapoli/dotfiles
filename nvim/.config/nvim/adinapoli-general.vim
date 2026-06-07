@@ -17,7 +17,8 @@ set termguicolors
 "colorscheme moonfly
 "colorscheme terafox
 "colorscheme nightfox
-colorscheme pinkmare
+" colorscheme pinkmare
+colorscheme tokyonight-moon
 "colorscheme cyberpunk-neon
 let g:terminal_ansi_colors = pop_punk#AnsiColors()
 
@@ -77,3 +78,19 @@ let g:local_vimrc = {'names':['.vimrc','.vim/.vimrc', '.vim/.vimrc.lua'],'hash_f
 " In the quickfix window, <CR> is used to jump to the error under the
 " cursor, so undefine the mapping there.
 autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
+
+" Wayland clipboard support using wl-copy/wl-paste
+if has('unix') && !has('macunix')
+  let g:clipboard = {
+        \   'name': 'wl-clipboard',
+        \   'copy': {
+        \      '+': 'wl-copy',
+        \      '*': 'wl-copy',
+        \    },
+        \   'paste': {
+        \      '+': 'wl-paste --no-newline',
+        \      '*': 'wl-paste --no-newline',
+        \    },
+        \   'cache_enabled': 0,
+        \ }
+endif

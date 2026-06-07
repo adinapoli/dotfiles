@@ -38,6 +38,7 @@ Plug '/Users/adinapoli/programming/lua/workspace-diagnostics.nvim'
 Plug 'rose-pine/neovim'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'cmoscofian/nibble-vim'
+Plug 'folke/tokyonight.nvim'
 
 " For markdown
 Plug 'godlygeek/tabular'
